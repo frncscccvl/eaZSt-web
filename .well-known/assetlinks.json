@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "eaZSt",
+      "package_name": "com.francis.eazst",
+      "sha256_cert_fingerprints":
+      ["05:FA:36:59:7C:8E:F5:A0:E5:4A:F7:3D:EE:C0:65:83:9D:EF:F2:62:58:73:98:88:C9:96:D5:D7:FE:CB:D7:65"]
+    }
+  }
+]

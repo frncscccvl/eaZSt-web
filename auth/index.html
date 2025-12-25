@@ -4,13 +4,44 @@
     <title>eaZSt Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #1a1a1a; color: white; }
-        .btn { display: inline-block; background: #9146FF; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        body { font-family: 'Courier New', Courier, monospace; text-align: center; padding: 40px; background: #000000; color: #d4af37; }
+        .btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 30px; text-decoration: none; border-radius: 0px; margin-top: 30px; font-weight: bold; }
+        p { color: #888; }
     </style>
 </head>
 <body>
-    <h2>Login Successful!</h2>
-    <p>Please return to the eaZSt app.</p>
-    <a href="intent://frncscccvl.github.io/eaZSt-web/auth#Intent;scheme=https;package=com.francis.eazst;end" class="btn">Click to Open App</a>
+    <h2>AUTHENTICATION SUCCESSFUL</h2>
+    <p>Redirecting to eaZSt...</p>
+    
+    <a id="appLink" href="#" class="btn">OPEN APP</a>
+
+    <script>
+        // 1. Get the current page URL parts
+        const fragment = window.location.hash; // #access_token=...
+        const search = window.location.search; // ?code=...
+        
+        // 2. Define the base Intent URL
+        const baseUrl = "intent://frncscccvl.github.io/eaZSt-web/auth";
+        const packageInfo = "#Intent;scheme=https;package=com.francis.eazst;end";
+
+        // 3. Construct the full URL by appending the data we found
+        let fullUrl = baseUrl + packageInfo;
+        
+        if (fragment) {
+            // For Twitch (Fragment)
+            fullUrl = baseUrl + fragment + packageInfo;
+        } else if (search) {
+            // For Patreon/YouTube (Query)
+            fullUrl = baseUrl + search + packageInfo;
+        }
+
+        // 4. Update the button
+        document.getElementById("appLink").href = fullUrl;
+
+        // 5. Auto-click it after 1 second
+        setTimeout(function() {
+            window.location.href = fullUrl;
+        }, 1000);
+    </script>
 </body>
 </html>

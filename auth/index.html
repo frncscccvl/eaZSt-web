@@ -4,18 +4,99 @@
     <title>eaZSt Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: 'Courier New', Courier, monospace; text-align: center; padding: 40px; background: #000000; color: #d4af37; }
-        .btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 30px; text-decoration: none; border-radius: 0px; margin-top: 30px; font-weight: bold; }
-        p { color: #888; }
+        /* RESET & BASE STYLES */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F5F5F7; /* Soft Off-White Background */
+            color: #1D1D1F; /* Deep Neutral Gray Text */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* CENTERED CARD */
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px; /* Smooth rounded corners */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04); /* Very subtle, premium shadow */
+            text-align: center;
+            max-width: 340px;
+            width: 85%;
+        }
+
+        /* SUCCESS ICON */
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #E8F5E9; /* Light Green Circle */
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .checkmark {
+            color: #00C853; /* Success Green */
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* TYPOGRAPHY */
+        h2 {
+            margin: 0 0 12px 0;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            margin: 0 0 32px 0;
+            color: #86868B; /* Lighter Gray for body text */
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* BUTTON (Pill Shape) */
+        .btn {
+            display: block;
+            background-color: #1D1D1F; /* Dark Button */
+            color: white;
+            padding: 16px 0;
+            width: 100%;
+            text-decoration: none;
+            border-radius: 100px; /* Full pill shape */
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
-    <h2>AUTHENTICATION SUCCESSFUL</h2>
-    <p>Redirecting to eaZSt...</p>
-    
-    <a id="appLink" href="#" class="btn">OPEN APP</a>
+
+    <div class="card">
+        <div class="icon-circle">
+            <span class="checkmark">&#10003;</span>
+        </div>
+
+        <h2>Connection Successful</h2>
+        <p>Your account has been linked. We are redirecting you back to eaZSt now.</p>
+        
+        <a id="appLink" href="#" class="btn">Return to App</a>
+    </div>
 
     <script>
+        // --- LOGIC PRESERVED FROM YOUR ORIGINAL FILE ---
+
         // 1. Get the current page URL parts
         const fragment = window.location.hash; // #access_token=...
         const search = window.location.search; // ?code=...
@@ -24,7 +105,7 @@
         const baseUrl = "intent://frncscccvl.github.io/eaZSt-web/auth";
         const packageInfo = "#Intent;scheme=https;package=com.francis.eazst;end";
 
-        // 3. Construct the full URL by appending the data we found
+        // 3. Construct the full URL
         let fullUrl = baseUrl + packageInfo;
         
         if (fragment) {

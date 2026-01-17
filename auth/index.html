@@ -80,19 +80,23 @@
             opacity: 0.9;
         }
     </style>
-  <script>    
-    if (window.location.hash && window.location.hash.includes("access_token")) {
-      var hash = window.location.hash;
-      
-      // Construct the Deep Link
-      // From: https://.../#access_token=123
-      // To:   com.francis.eazst://callback#access_token=123
-      var deepLink = "com.francis.eazst://callback" + hash;
+    <script>
+        // 🦘 THE UNIVERSAL BOUNCE SCRIPT (Twitch + Google)
+    
+        var appScheme = "com.francis.eazst://callback";
 
-      // Perform the redirect
-      window.location.href = deepLink;
-    }
-  </script>
+        // 1. Handle Twitch (Hash / Fragment)
+        if (window.location.hash && window.location.hash.includes("access_token")) {
+          window.location.href = appScheme + window.location.hash;
+        } 
+    
+        // 2. Handle Google/YouTube (Search / Query)
+        else if (window.location.search && window.location.search.includes("code")) {
+          // Google sends: https://.../auth?code=123&state=...
+          // We bounce to: com.francis.eazst://callback?code=123&state=...
+          window.location.href = appScheme + window.location.search;
+        }
+    </script>
 </head>
 <body>
 

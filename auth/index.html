@@ -80,6 +80,19 @@
             opacity: 0.9;
         }
     </style>
+  <script>    
+    if (window.location.hash && window.location.hash.includes("access_token")) {
+      var hash = window.location.hash;
+      
+      // Construct the Deep Link
+      // From: https://.../#access_token=123
+      // To:   com.francis.eazst://callback#access_token=123
+      var deepLink = "com.francis.eazst://callback" + hash;
+
+      // Perform the redirect
+      window.location.href = deepLink;
+    }
+  </script>
 </head>
 <body>
 

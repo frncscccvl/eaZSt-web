@@ -31,12 +31,6 @@ We use Google Firebase Crashlytics to help us identify crashes and fix bugs.
 * **Privacy:** This data is anonymous and does not contain your financial tokens or personal identity.
 * [Google Privacy Policy](https://policies.google.com/privacy)
 
-### D. Subscription Data (RevenueCat)
-We use RevenueCat to manage optional premium subscriptions (e.g., "Pro Mode").
-* **Data Collected:** RevenueCat generates an Anonymous App User ID to track your subscription status (e.g., "Is this user a Pro member?").
-* **Privacy:** We do not link this ID to your name or email address unless you explicitly contact support and provide it.
-* [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/)
-
 ## 3. Data Retention & Deletion
 * **Financial Data:** Retained only as long as the App is installed on your device. **We do not have access to your data, and therefore cannot execute remote deletion requests.** To permanently delete all data, simply uninstall the App from your device.
 * **Crash Logs:** Retained by Google Firebase for 90 days before being automatically deleted.

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - eaZSt</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+    <style>
+        /* eaZSt Brand Tweaks */
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1, h2, h3 {
+            color: #109DD7; /* eaZSt / Plaid Cerulean */
+        }
+        strong {
+            color: var(--text-main);
+        }
+        a {
+            color: #109DD7;
+            text-decoration: underline;
+        }
+        /* Spacing for lists */
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy for eaZSt</h1>
+
+    <p><strong>Last Updated:</strong> January 25, 2026</p>
+
+    <p><strong>eaZSt</strong> ("the App") is developed by <strong>FRANCIS CACCAVALE</strong> ("we," "us," or "our"). We respect your privacy and are committed to protecting it through our compliance with this policy.</p>
+
+    <p>This policy describes the types of information we may collect from you or that you may provide when you use the eaZSt mobile application and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+
+    <h2>1. Data Architecture (Hybrid Model)</h2>
+    <p>eaZSt prioritizes on-device storage for most activities, but utilizes a secure backend server for specific banking integrations where required by security protocols.</p>
+    <ul>
+        <li><strong>Platform Integrations (YouTube, Twitch, Patreon):</strong> Authentication tokens and data for these platforms are stored <strong>locally on your device</strong> using secure encryption (iOS Keychain and Android Keystore). We do not sync this data to our servers.</li>
+        <li><strong>Banking Integrations (Plaid):</strong> Due to strict banking security requirements, authentication tokens for bank connections are stored in an <strong>encrypted database on our secure backend server</strong>.</li>
+    </ul>
+
+    <h2>2. Information We Collect and How We Use It</h2>
+
+    <h3>A. Third-Party Service Connections (OAuth)</h3>
+    <p>The App allows you to connect to third-party services to visualize your earnings.</p>
+    <ul>
+        <li><strong>Direct Integrations:</strong> For services like YouTube and Twitch, the App communicates directly from your device to the service provider. We do not intercept or store this data on our servers.</li>
+        <li><strong>Banking Services (Plaid):</strong> We use Plaid Inc. ("Plaid") to connect your bank accounts. When you link a bank account:
+            <ol>
+                <li>Plaid collects your login credentials directly (we never see your bank username or password).</li>
+                <li>Plaid provides our secure server with an <strong>Access Token</strong>.</li>
+                <li>We use this token to fetch <strong>transaction data</strong> (specifically deposits) to calculate your passive income.</li>
+                <li>Information collected by Plaid is subject to the <a href="https://plaid.com/legal/#end-user-privacy-policy" target="_blank">Plaid Privacy Policy</a>.</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h3>B. Biometric Data (FaceID / TouchID)</h3>
+    <p>The App uses your device's biometric capabilities to secure your "Vault" of financial data.</p>
+    <ul>
+        <li><strong>Processing:</strong> Biometric authentication is handled entirely by your device's operating system.</li>
+        <li><strong>No Access:</strong> The App never has access to your actual face data or fingerprint data. We only receive a "Pass" or "Fail" signal from the operating system to unlock the App.</li>
+    </ul>
+
+    <h3>C. Crash Logs and Stability (Firebase)</h3>
+    <p>We use Google Firebase Crashlytics to help us identify crashes and fix bugs.</p>
+    <ul>
+        <li><strong>Data Collected:</strong> If the App crashes, it may send an anonymous crash report containing technical details (e.g., "Crash occurred in DashboardScreen on iPhone 13, iOS 16").</li>
+        <li><strong>Privacy:</strong> This data is anonymous and does not contain your financial tokens or personal identity.</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
+
+    <h2>3. Data Retention & Deletion</h2>
+    <ul>
+        <li><strong>Local Data:</strong> For Platform Integrations (YouTube, etc.), uninstalling the App permanently deletes the data from your device.</li>
+        <li><strong>Server Data (Banking):</strong> If you choose to disconnect a bank account inside the App, we immediately <strong>delete the associated Access Token from our server database</strong>, permanently severing the connection to your bank.</li>
+        <li><strong>Requesting Full Deletion:</strong> You may request the deletion of all server-side data associated with your user ID by contacting us at the email below.</li>
+    </ul>
+
+    <h2>4. Third-Party Links</h2>
+    <p>The App contains links to third-party websites (e.g., your Twitch Dashboard, Patreon Creator Page). We are not responsible for the privacy practices or content of these third-party sites.</p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>The App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>6. Your Consent</h2>
+    <p>By using the App, you consent to our Privacy Policy.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have questions regarding this privacy policy, you may contact us at:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:hello@frncscccvl.com">hello@frncscccvl.com</a></li>
+        <li><strong>Developer:</strong> FRANCIS CACCAVALE</li>
+    </ul>
+
+    <br><br>
+    <footer>
+        <hr>
+        <p style="text-align: center; font-size: 0.8rem; opacity: 0.7;">
+            &copy; 2026 Francis Caccavale. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

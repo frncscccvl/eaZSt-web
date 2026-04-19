@@ -95,10 +95,32 @@
             opacity: 0.85;
         }
 
-        .footer-note {
+        .footer-links {
+            margin-bottom: 16px;
             font-size: 12px;
-            color: #666666;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .footer-links span {
+            color: #444;
+            margin: 0 8px;
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #555;
             margin: 0;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -118,8 +140,12 @@
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">Download eaZSt today</a>
-
-        <p class="footer-note">Your dashboard will sync automatically once you return to the app.</p>
+        
+        <div class="footer-links">
+            <a href="/tos.html">Terms of Service</a>
+            <span>•</span>
+            <a href="/privacy/privacy.html">Privacy Policy</a>
+        </div>
     </div>
 
 </body>

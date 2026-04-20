@@ -8,29 +8,93 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 
     <style>
-        /* eaZSt Brand Tweaks */
+        :root {
+            /* Strict Black & White Theme */
+            --bg-color: #ffffff;
+            --text-main: #000000;
+            --text-muted: #555555;
+            --border-color: #dddddd;
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --text-main: #ffffff;
+                --text-muted: #aaaaaa;
+                --border-color: #333333;
+            }
+        }
+
         body {
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
         }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20%;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
         h1, h2, h3 {
-            color: #109DD7; /* eaZSt / Plaid Cerulean */
+            color: var(--text-main);
+            letter-spacing: 0.02em;
         }
+
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+
         strong {
-            color: var(--text-main); /* Keeps bold text readable in dark mode */
+            color: var(--text-main);
         }
+
         a {
-            color: #109DD7;
+            color: var(--text-main);
             text-decoration: underline;
+            font-weight: 600;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-section {
+            background: rgba(128, 128, 128, 0.05);
+            padding: 1.5rem;
+            border-left: 3px solid var(--text-main);
+            margin: 2rem 0;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
-    <h1>Terms of Service for eaZSt</h1>
-
-    <p><strong>Last Updated:</strong> January 20, 2026</p>
+    <div class="header-container">
+        <img src="icon_.png" alt="eaZSt Logo" class="app-logo">
+        <h1>Terms of Service for eaZSt</h1>
+        <p><strong>Last Updated:</strong> April 20, 2026</p>
+    </div>
 
     <p>Please read these Terms of Service ("Terms") carefully before using the <strong>eaZSt</strong> mobile application (the "App") operated by <strong>FRANCIS CACCAVALE</strong> ("us," "we," or "our").</p>
 
@@ -39,11 +103,19 @@
     <h2>1. Nature of the App</h2>
     <p><strong>eaZSt</strong> is a visualization tool designed to help you track and view your income sources.</p>
     <ul>
-        <li><strong>Informational Use Only:</strong> The financial data presented in the App is for informational and entertainment purposes only. While we strive for accuracy, we cannot guarantee that the data retrieved from third-party APIs (YouTube, Twitch, etc.) is 100% accurate or up-to-date.</li>
+        <li><strong>Informational Use Only:</strong> The financial data presented in the App is for informational and entertainment purposes only. While we strive for accuracy, we cannot guarantee that the data retrieved from third-party APIs (YouTube, Twitch, Shopify, etc.) is 100% accurate or up-to-date.</li>
         <li><strong>Not Financial Advice:</strong> The App does not provide financial, tax, or legal advice. You should verify all financial data with your actual bank or platform records before making financial decisions.</li>
     </ul>
 
-    <h2>2. Subscriptions & Payments</h2>
+    <h3>2. AI-Generated Insights (Gemma 4)</h3>
+    <p>The App utilizes <strong>Gemma 4</strong>, an open model developed by Google, to provide automated financial insights and momentum forecasting. By using these features, you acknowledge and agree that:</p>
+    <ul>
+        <li><strong>No Guarantee of Accuracy:</strong> AI-generated insights are experimental and provided "as-is". Artificial intelligence models can hallucinate or produce inaccurate forecasts. We do not guarantee their accuracy, reliability, or completeness.</li>
+        <li><strong>User Responsibility:</strong> You are solely responsible for any decisions made based on AI-generated momentum forecasts. These insights are not a substitute for professional financial advising.</li>
+        <li><strong>Acceptable Use:</strong> You agree not to attempt to reverse engineer, manipulate, or extract the underlying model parameters of the Gemma 4 architecture through your use of the App.</li>
+    </ul>
+
+    <h2>3. Subscriptions & Payments</h2>
     <p>The App offers a "Pro Mode" subscription that unlocks additional features.</p>
     <ul>
         <li><strong>Billing:</strong> Payments are processed securely via the Google Play Store. We do not store your credit card information.</li>
@@ -51,33 +123,30 @@
         <li><strong>Refunds:</strong> All refund requests must be handled directly through Google Play’s refund policy. We do not have the ability to issue direct refunds.</li>
     </ul>
 
-    <h2>3. Intellectual Property</h2>
-    <p>The App and its original content (including the particle physics engine, visual design, and logo) are and will remain the exclusive property of <strong>FRANCIS CACCAVALE</strong>. You may not reverse engineer, decompile, or attempt to extract the source code of the App.</p>
+    <h2>4. Intellectual Property</h2>
+    <p>The App and its original content (including the particle physics engine, visual design, AI prompt architecture, and logo) are and will remain the exclusive property of <strong>FRANCIS CACCAVALE</strong>. You may not reverse engineer, decompile, or attempt to extract the source code of the App.</p>
 
-    <h2>4. User Data & Privacy</h2>
-    <p>Our collection and use of personal information in connection with your access to and use of the App is described in our <a href="https://frncscccvl.github.io/eaZSt-web/privacy/privacy.html">Privacy Policy</a>.</p>
+    <h2>5. User Data & Privacy</h2>
+    <p>Our collection and use of personal information in connection with your access to and use of the App is described in our <a href="/privacy/privacy.html">Privacy Policy</a>.</p>
     <ul>
-        <li><strong>Local Data:</strong> You understand that your financial data is stored locally on your device. You are responsible for keeping your device secure to prevent unauthorized access to your data.</li>
+        <li><strong>Local Data:</strong> You understand that your financial data is heavily reliant on local storage on your device. You are responsible for keeping your device secure to prevent unauthorized access to your data.</li>
     </ul>
 
-    <h2>5. Third-Party Services</h2>
+    <h2>6. Third-Party Services</h2>
     <p>The App may contain links to third-party web sites or services that are not owned or controlled by us (e.g., YouTube, Twitch, Patreon). We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
 
-    <h2>6. Limitation of Liability</h2>
-    <p>In no event shall <strong>FRANCIS CACCAVALE</strong>, nor his partners or suppliers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the App; (ii) any errors or inaccuracies of content.</p>
+    <h2>7. Limitation of Liability</h2>
+    <p>In no event shall <strong>FRANCIS CACCAVALE</strong>, nor his partners or suppliers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the App; (ii) any errors, inaccuracies, or AI hallucinations within the content.</p>
 
-    <h2>7. Changes</h2>
+    <h2>8. Changes</h2>
     <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.</p>
 
-    <h2>8. Contact Us</h2>
+    <h2>9. Contact Us</h2>
     <p>If you have any questions about these Terms, please contact us at: <a href="mailto:hello@frncscccvl.com">hello@frncscccvl.com</a></p>
 
-    <br><br>
     <footer>
         <hr>
-        <p style="text-align: center; font-size: 0.8rem; opacity: 0.7;">
-            &copy; 2026 Francis Caccavale. All rights reserved.
-        </p>
+        <p>&copy; 2026 Francis Caccavale. All rights reserved.</p>
     </footer>
 
 </body>

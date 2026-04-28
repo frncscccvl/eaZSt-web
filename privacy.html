@@ -142,11 +142,19 @@
     <p>The App uses your device's biometric capabilities (FaceID/Fingerprint) to secure your dashboard. Biometric authentication is handled entirely by your device's OS; we only receive a secure "Unlock" signal. To route push notifications, we store an anonymous FCM (Firebase Cloud Messaging) device token.</p>
 
     <h2>3. Data Retention & Instant Account Deletion</h2>
-    <p>We believe your data belongs to you. You have the right to revoke our access at any time.</p>
+    <p>We believe your data belongs to you. You have the right to revoke our access and permanently delete your account data at any time.</p>
     <ul>
-        <li><strong>Individual Disconnects:</strong> You can disconnect any service within the App. Doing so immediately deletes local tokens and instructs our backend to sever the connection with that third party.</li>
-        <li><strong>Full Account Deletion:</strong> The App contains a "Delete All Data" feature. This instantly severs all active banking connections (Plaid), deletes your anonymous user data and device identifiers, and wipes all webhook routing maps from our servers. Any subsequent data sent by third parties to our servers will be permanently rejected.</li>
+        <li><strong>Individual Disconnects:</strong> You can disconnect any service within the App's Connections hub. Doing so immediately deletes local tokens and instructs our backend to sever the connection with that third party.</li>
+        <li><strong>Full Account Deletion:</strong> The App contains a hidden "Nuclear Wipe" feature to prevent accidental deletion. Triggering this instantly severs all active banking connections (Plaid), deletes your anonymous user data and device identifiers, and wipes all webhook routing maps from our servers. Any subsequent data sent by third parties to our servers will be permanently rejected.</li>
     </ul>
+    
+    <p><strong>How to permanently delete your data:</strong></p>
+    <ol>
+        <li>Open the eaZSt app and navigate to the <strong>Connections/Settings</strong> screen (the gear icon).</li>
+        <li>Tap on <strong>About</strong> at the bottom of the list.</li>
+        <li>Locate the <strong>App Version</strong> tile.</li>
+        <li><strong>Tap the App Version tile exactly four (4) times.</strong> A countdown toast will appear. On the fourth tap, the permanent data wipe will initiate, and you will be automatically signed out.</li>
+    </ol>
 
     <h2>4. Crash Logs and Stability</h2>
     <p>We use crash reporting tools (e.g., Firebase Crashlytics) to identify bugs. If the App crashes, it sends an anonymous technical report. This data contains no financial tokens. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>

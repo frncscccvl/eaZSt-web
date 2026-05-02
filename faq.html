@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - eaZSt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #000000;
+            --border-color: #dddddd;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --text-main: #ffffff;
+                --border-color: #333333;
+            }
+        }
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+        h2 { margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        .back-link { font-weight: bold; text-decoration: none; display: inline-block; margin-bottom: 2rem;}
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <a href="/" class="back-link">← Back to Home</a>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <h2>Why does eaZSt need access to my YouTube / Google AdSense accounts?</h2>
+    <p>eaZSt is a passive income dashboard. We request read-only access to your YouTube and AdSense metrics so the app can securely aggregate your overnight video revenue, channel memberships, and page views. This allows you to wake up to a personalized morning report showing exactly what your portfolio did while you were sleeping.</p>
+
+    <h2>Do you sell my data?</h2>
+    <p><strong>Absolutely not.</strong> Your financial data is securely retrieved for your own personal visualization. We do not sell, broker, or share your data with advertising networks, third-party data brokers, or external AI trainers. For full details, see our <a href="/privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Is my data safe with the AI feature?</h2>
+    <p>Yes. eaZSt uses <strong>Gemma</strong>, a localized, on-device AI. Your financial metrics and questions are processed directly on your phone's physical hardware (edge computing). Your data never leaves your device to hit cloud LLM APIs.</p>
+
+    <h2>How do I delete my data?</h2>
+    <p>You own your data. You can sever connections individually inside the app's Connections Hub. For a complete account wipe, open the app, go to Settings -> About, and tap the App Version 4 times. This permanently deletes your local tokens, anonymous database records, and server webhook maps instantly.</p>
+
+</body>
+</html>

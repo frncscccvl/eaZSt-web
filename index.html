@@ -49,10 +49,17 @@
             position: relative; /* Allows absolute positioning for the FAQ link */
         }
 
-        .faq-link-top {
+        /* 🚀 The Top-Right Action Group */
+        .top-actions {
             position: absolute;
             top: 24px;
             right: 24px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .pill-btn {
             color: var(--text-muted);
             text-decoration: none;
             font-size: 13px;
@@ -62,12 +69,63 @@
             background-color: rgba(255, 255, 255, 0.05);
             border: 1px solid transparent;
             transition: all 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .faq-link-top:hover {
+        .pill-btn:hover {
             color: var(--text-main);
             border-color: var(--border-color);
             background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* 🚀 The Language Dropdown Menu */
+        .lang-wrapper {
+            position: relative;
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background-color: var(--card-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+        }
+
+        .lang-wrapper:hover .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-menu button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .lang-menu button:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
         }
 
         .icon-container {
@@ -213,8 +271,50 @@
 <body>
 
     <div class="card">
-        <!-- 🚀 Top Right FAQ Button -->
-        <a href="/faq.html" class="faq-link-top">FAQ</a>
+        <div class="card">
+        <!-- 🚀 Top Right Actions -->
+        <div class="top-actions">
+            <!-- Language Dropdown -->
+            <div class="lang-wrapper">
+                <div class="pill-btn" id="current-lang">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.34.16-2h4.68c.09.66.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+                    EN
+                </div>
+                <div class="lang-menu">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('es')">Español</button>
+                    <button onclick="setLanguage('ja')">日本語</button>
+                </div>
+            </div>
+            
+            <!-- FAQ Button -->
+            <a href="/faq.html" class="pill-btn">FAQ</a>
+        </div>
+
+        <div class="icon-container">
+            <img src="icon_.png" alt="eaZSt Icon" class="app-icon">
+        </div>
+
+        <h1>eaZSt</h1>
+        <p class="tagline" data-i18n="tagline">Visualize and track passive income made while asleep.</p>
+
+        <div class="split-row">
+            <div class="purpose-box">
+                <h3 data-i18n="purposeTitle">App Purpose</h3>
+                <p data-i18n="purposeDesc">eaZSt securely connects to YouTube and AdSense to aggregate your overnight metrics and revenue. Our on-device AI generates a private morning report.</p>
+            </div>
+
+            <div class="qr-placeholder">
+                <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4,2.5V21.5L18.4,12L4,2.5M5.5,5.4L14.7,11.5L5.5,18.6V5.4M16.1,10.6L19.5,12L16.1,13.4L15.3,12L16.1,10.6Z" />
+            </svg>
+            <span data-i18n="downloadBtn">Get it on Google Play</span>
+        </a>
 
         <div class="icon-container">
             <img src="icon_.png" alt="eaZSt Icon" class="app-icon">
@@ -250,5 +350,52 @@
         </div>
     </div>
 
+    <!-- 🚀 The Instant Translation Engine -->
+    <script>
+        const translations = {
+            en: {
+                label: "EN",
+                tagline: "Visualize and track passive income made while asleep.",
+                purposeTitle: "App Purpose",
+                purposeDesc: "eaZSt securely connects to YouTube and AdSense to aggregate your overnight metrics and revenue. Our on-device AI generates a private morning report.",
+                downloadBtn: "Get it on Google Play"
+            },
+            es: {
+                label: "ES",
+                tagline: "Visualiza y rastrea los ingresos pasivos generados mientras duermes.",
+                purposeTitle: "Propósito de la App",
+                purposeDesc: "eaZSt se conecta de forma segura a YouTube y AdSense para agregar tus métricas e ingresos nocturnos. Nuestra IA en el dispositivo genera un informe matutino privado.",
+                downloadBtn: "Descargar en Google Play"
+            },
+            ja: {
+                label: "JA",
+                tagline: "睡眠中に得た不労所得を可視化して追跡します。",
+                purposeTitle: "アプリの目的",
+                purposeDesc: "eaZStはYouTubeやAdSenseと安全に接続し、夜間の指標と収益を集計します。オンデバイスAIがプライベートな朝のレポートを生成します。",
+                downloadBtn: "Google Play で手に入れよう"
+            }
+        };
+
+        function setLanguage(langCode) {
+            // 1. Swap all text on the screen
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[langCode] && translations[langCode][key]) {
+                    el.innerText = translations[langCode][key];
+                }
+            });
+
+            // 2. Update the button label (keeps the globe SVG, swaps the text)
+            const btn = document.getElementById('current-lang');
+            btn.innerHTML = btn.innerHTML.replace(/[A-Z]{2}/, translations[langCode].label);
+
+            // 3. Save to localStorage so it remembers their choice next time
+            localStorage.setItem('eazst_lang', langCode);
+        }
+
+        // Auto-load their saved language on boot
+        const savedLang = localStorage.getItem('eazst_lang') || 'en';
+        setLanguage(savedLang);
+    </script>
 </body>
 </html>

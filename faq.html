@@ -150,6 +150,15 @@
         .faq-answer strong {
             color: var(--text-main);
         }
+        
+        .faq-answer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -164,7 +173,6 @@
 
         <div class="faq-container">
 
-            <!-- Question 1 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <span data-i18n="q1">Who is eaZSt for?</span>
@@ -177,7 +185,6 @@
                 </div>
             </div>
 
-            <!-- Question 2 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <span data-i18n="q2">What are your thoughts on internet privacy?</span>
@@ -190,7 +197,6 @@
                 </div>
             </div>
 
-            <!-- Question 3 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <span data-i18n="q3">Is my financial data secure?</span>
@@ -203,7 +209,56 @@
                 </div>
             </div>
 
-            <!-- Question 4 -->
+            <!-- 🚀 NEW GOOGLE COMPLIANCE QUESTIONS -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span data-i18n="q6">What YouTube data do you use?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer" data-i18n="a6">
+                        We request read-only access to your YouTube channel metadata, estimated revenue (via YouTube Analytics), and channel memberships. This data is exclusively used to calculate your overnight income momentum and generate your personalized morning report.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span data-i18n="q7">How can I revoke access to Google data later?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer" data-i18n="a7">
+                        You can revoke eaZSt's access to your Google account at any time by visiting your Google Account's <a href="https://myaccount.google.com/permissions" target="_blank">Security Settings</a>. Alternatively, you can use the in-app "Disconnect" button in the Connections Hub to instantly sever the link and delete local tokens.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span data-i18n="q8">Do I need an account to use eaZSt?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer" data-i18n="a8">
+                        No. eaZSt uses anonymous device-level authentication. You do not need to provide an email, phone number, or password to use the app. Your data is tied securely to your physical device.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span data-i18n="q9">Do you share Google user data with third parties?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer" data-i18n="a9">
+                        <strong>No.</strong> We strictly comply with the Google API Services User Data Policy. We do not share, sell, or broker any Google user data to advertising networks, data brokers, or external AI models.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original Q4 and Q5 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <span data-i18n="q4">So how do you encrypt data?</span>
@@ -216,7 +271,6 @@
                 </div>
             </div>
 
-            <!-- Question 5 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <span data-i18n="q5">Why is eaZSt only for Android?</span>
@@ -247,7 +301,15 @@
                 q4: "So how do you encrypt data?",
                 a4: "We utilize a secure hybrid architecture. The app uses anonymous authentication, meaning we never see or store your passwords. Your active session data is locked locally inside your device's hardware-backed Keystore. The necessary OAuth tokens used for background syncs are stored on our secure backend inside an encrypted PostgreSQL database.",
                 q5: "Why is eaZSt only for Android?",
-                a5: "Apple's rigid iOS ecosystem and restrictive developer guidelines block the exact background processes and system-level event receivers required to build our core \"sleep tracking\" features. Android respects developers and provides the necessary freedom to build powerful, unrestricted background automation."
+                a5: "Apple's rigid iOS ecosystem and restrictive developer guidelines block the exact background processes and system-level event receivers required to build our core \"sleep tracking\" features. Android respects developers and provides the necessary freedom to build powerful, unrestricted background automation.",
+                q6: "What YouTube data do you use?",
+                a6: "We request read-only access to your YouTube channel metadata, estimated revenue (via YouTube Analytics), and channel memberships. This data is exclusively used to calculate your overnight income momentum and generate your personalized morning report.",
+                q7: "How can I revoke access to Google data later?",
+                a7: "You can revoke eaZSt's access to your Google account at any time by visiting your Google Account's <a href=\"https://myaccount.google.com/permissions\" target=\"_blank\">Security Settings</a>. Alternatively, you can use the in-app \"Disconnect\" button in the Connections Hub to instantly sever the link and delete local tokens.",
+                q8: "Do I need an account to use eaZSt?",
+                a8: "No. eaZSt uses anonymous device-level authentication. You do not need to provide an email, phone number, or password to use the app. Your data is tied securely to your physical device.",
+                q9: "Do you share Google user data with third parties?",
+                a9: "<strong>No.</strong> We strictly comply with the Google API Services User Data Policy. We do not share, sell, or broker any Google user data to advertising networks, data brokers, or external AI models."
             },
             es: {
                 backBtn: "Volver",
@@ -261,7 +323,15 @@
                 q4: "Entonces, ¿cómo encriptan los datos?",
                 a4: "Utilizamos una arquitectura híbrida segura. La aplicación utiliza autenticación anónima, lo que significa que nunca vemos ni almacenamos tus contraseñas. Los datos de tu sesión activa están bloqueados localmente dentro del Keystore respaldado por hardware de tu dispositivo. Los tokens OAuth necesarios utilizados para las sincronizaciones en segundo plano se almacenan en nuestro backend seguro dentro de una base de datos PostgreSQL encriptada.",
                 q5: "¿Por qué eaZSt es solo para Android?",
-                a5: "El rígido ecosistema de iOS de Apple y las restrictivas pautas para desarrolladores bloquean los procesos exactos en segundo plano y los receptores de eventos a nivel de sistema requeridos para construir nuestras funciones principales de \"seguimiento del sueño\". Android respeta a los desarrolladores y proporciona la libertad necesaria para construir una automatización en segundo plano potente y sin restricciones."
+                a5: "El rígido ecosistema de iOS de Apple y las restrictivas pautas para desarrolladores bloquean los procesos exactos en segundo plano y los receptores de eventos a nivel de sistema requeridos para construir nuestras funciones principales de \"seguimiento del sueño\". Android respeta a los desarrolladores y proporciona la libertad necesaria para construir una automatización en segundo plano potente y sin restricciones.",
+                q6: "¿Qué datos de YouTube utilizan?",
+                a6: "Solicitamos acceso de solo lectura a los metadatos de su canal de YouTube, ingresos estimados (a través de YouTube Analytics) y membresías del canal. Estos datos se utilizan exclusivamente para calcular el impulso de sus ingresos nocturnos y generar su informe matutino personalizado.",
+                q7: "¿Cómo puedo revocar el acceso a los datos de Google más adelante?",
+                a7: "Puede revocar el acceso de eaZSt a su cuenta de Google en cualquier momento visitando la <a href=\"https://myaccount.google.com/permissions\" target=\"_blank\">Configuración de seguridad</a> de su cuenta de Google. Alternativamente, puede usar el botón \"Desconectar\" dentro de la aplicación para cortar instantáneamente el enlace y eliminar los tokens locales.",
+                q8: "¿Necesito una cuenta para usar eaZSt?",
+                a8: "No. eaZSt utiliza autenticación anónima a nivel de dispositivo. No necesita proporcionar un correo electrónico, número de teléfono o contraseña. Sus datos están vinculados de forma segura a su dispositivo físico.",
+                q9: "¿Comparten datos de usuarios de Google con terceros?",
+                a9: "<strong>No.</strong> Cumplimos estrictamente con la Política de datos del usuario de los servicios API de Google. No compartimos, vendemos ni intermediamos datos de usuarios de Google a redes publicitarias, corredores de datos o modelos de IA externos."
             },
             ja: {
                 backBtn: "戻る",
@@ -275,25 +345,74 @@
                 q4: "では、どのようにデータを暗号化していますか？",
                 a4: "安全なハイブリッドアーキテクチャを利用しています。アプリは匿名認証を使用するため、パスワードを見たり保存したりすることはありません。アクティブなセッションデータは、デバイスのハードウェアに裏付けられたKeystore内にローカルでロックされます。バックグラウンド同期に必要なOAuthトークンは、暗号化されたPostgreSQLデータベース内の安全なバックエンドに保存されます。",
                 q5: "なぜeaZStはAndroid専用なのですか？",
-                a5: "Appleの厳格なiOSエコシステムと制限の多い開発者ガイドラインは、私たちのコアである「睡眠追跡」機能を構築するために必要な、正確なバックグラウンドプロセスとシステムレベルのイベントレシーバーをブロックします。Androidは開発者を尊重し、強力で制限のないバックグラウンド自動化を構築するために必要な自由を提供してくれます。"
+                a5: "Appleの厳格なiOSエコシステムと制限の多い開発者ガイドラインは、私たちのコアである「睡眠追跡」機能を構築するために必要な、正確なバックグラウンドプロセスとシステムレベルのイベントレシーバーをブロックします。Androidは開発者を尊重し、強力で制限のないバックグラウンド自動化を構築するために必要な自由を提供してくれます。",
+                q6: "YouTubeのどのデータを使用しますか？",
+                a6: "YouTubeチャンネルのメタデータ、推定収益（YouTubeアナリティクス経由）、およびチャンネルメンバーシップへの読み取り専用アクセスをリクエストします。これらのデータは、夜間の収益モメンタムを計算し、パーソナライズされた朝のレポートを作成するためにのみ使用されます。",
+                q7: "後でGoogleデータへのアクセスを取り消すにはどうすればよいですか？",
+                a7: "Googleアカウントの<a href=\"https://myaccount.google.com/permissions\" target=\"_blank\">セキュリティ設定</a>にアクセスすることで、いつでもeaZStへのアクセスを取り消すことができます。または、アプリ内の「切断」ボタンを使用してリンクを即座に切断し、ローカルトークンを削除することもできます。",
+                q8: "eaZStを使用するにはアカウントが必要ですか？",
+                a8: "いいえ。eaZStはデバイスレベルの匿名認証を使用します。メールアドレス、電話番号、パスワードを提供する必要はありません。あなたのデータは物理的なデバイスに安全に紐付けられています。",
+                q9: "Googleユーザーデータを第三者と共有しますか？",
+                a9: "<strong>いいえ。</strong>Google API サービスのユーザーデータポリシーを厳格に遵守しています。Googleユーザーデータを広告ネットワーク、データブローカー、または外部のAIモデルと共有、販売、または仲介することはありません。"
+            },
+            fr: {
+                backBtn: "Retour",
+                title: "FAQ",
+                q1: "À qui s'adresse eaZSt ?",
+                a1: "eaZSt est conçu pour les créateurs de contenu, les streamers et les entrepreneurs numériques qui génèrent des revenus passifs. Si vous gagnez de l'argent via YouTube, Twitch, Patreon, Shopify ou des dépôts bancaires automatisés et que vous recherchez la \"dose de dopamine\" ultime en voyant ce que vous avez gagné pendant votre sommeil, cette application est pour vous.",
+                q2: "Que pensez-vous de la confidentialité sur Internet ?",
+                a2: "Nous pensons que vos données vous appartiennent strictement. À l'ère où les données des utilisateurs sont le produit, nous adoptons l'approche inverse : une minimisation stricte des données. Nous ne vendons pas vos données, nous ne les vendons pas à des réseaux publicitaires et nous n'utilisons pas votre historique financier pour former des modèles d'IA mondiaux.",
+                q3: "Mes données financières sont-elles en sécurité ?",
+                a3: "<strong>Oui.</strong> Toutes les connexions tierces sont explicitement en \"Lecture seule\". Nous ne pouvons pas déplacer votre argent. Nous utilisons Plaid pour une sécurité de niveau bancaire, et toutes les connexions sont tokenisées. De plus, vos informations d'IA personnalisées sont générées localement sur le matériel de votre téléphone, garantissant que vos métriques financières ne touchent jamais un serveur cloud LLM tiers.",
+                q4: "Alors, comment chiffrez-vous les données ?",
+                a4: "Nous utilisons une architecture hybride sécurisée. L'application utilise une authentification anonyme, ce qui signifie que nous ne voyons ni ne stockons jamais vos mots de passe. Les données de votre session active sont verrouillées localement dans le Keystore matériel de votre appareil. Les jetons OAuth nécessaires aux synchronisations en arrière-plan sont stockés sur notre backend sécurisé dans une base de données PostgreSQL chiffrée.",
+                q5: "Pourquoi eaZSt n'est-il disponible que sur Android ?",
+                a5: "L'écosystème iOS rigide d'Apple et ses directives restrictives pour les développeurs bloquent les processus en arrière-plan et les récepteurs d'événements au niveau du système requis pour créer nos principales fonctionnalités de \"suivi du sommeil\". Android respecte les développeurs et offre la liberté nécessaire pour créer une automatisation en arrière-plan puissante et sans restriction.",
+                q6: "Quelles données YouTube utilisez-vous ?",
+                a6: "Nous demandons un accès en lecture seule aux métadonnées de votre chaîne YouTube, à vos revenus estimés (via YouTube Analytics) et aux adhésions à votre chaîne. Ces données sont exclusivement utilisées pour calculer la dynamique de vos revenus nocturnes et générer votre rapport matinal personnalisé.",
+                q7: "Comment puis-je révoquer l'accès aux données Google plus tard ?",
+                a7: "Vous pouvez révoquer l'accès d'eaZSt à votre compte Google à tout moment en visitant les <a href=\"https://myaccount.google.com/permissions\" target=\"_blank\">Paramètres de sécurité</a> de votre compte Google. Vous pouvez également utiliser le bouton \"Déconnecter\" dans l'application pour rompre instantanément le lien et supprimer les jetons locaux.",
+                q8: "Ai-je besoin d'un compte pour utiliser eaZSt ?",
+                a8: "Non. eaZSt utilise une authentification anonyme au niveau de l'appareil. Vous n'avez pas besoin de fournir d'e-mail, de numéro de téléphone ou de mot de passe. Vos données sont liées en toute sécurité à votre appareil physique.",
+                q9: "Partagez-vous les données utilisateur Google avec des tiers ?",
+                a9: "<strong>Non.</strong> Nous nous conformons strictement à la politique relative aux données utilisateur des services d'API Google. Nous ne partageons, ne vendons ni ne courtons aucune donnée utilisateur Google à des réseaux publicitaires, des courtiers en données ou des modèles d'IA externes."
+            },
+            it: {
+                backBtn: "Indietro",
+                title: "FAQ",
+                q1: "Per chi è eaZSt?",
+                a1: "eaZSt è progettato per creatori di contenuti, streamer e imprenditori digitali che generano entrate passive. Se guadagni tramite YouTube, Twitch, Patreon, Shopify o depositi bancari automatizzati e desideri l'ultimo \"colpo di dopamina\" nel vedere cosa hai guadagnato mentre dormivi, questa app fa per te.",
+                q2: "Cosa pensate della privacy su Internet?",
+                a2: "Crediamo che i tuoi dati appartengano rigorosamente a te. In un'era in cui i dati degli utenti sono il prodotto, adottiamo l'approccio opposto: rigorosa minimizzazione dei dati. Non vendiamo i tuoi dati, non li cediamo a reti pubblicitarie e non utilizziamo la tua cronologia finanziaria per addestrare modelli di intelligenza artificiale globali.",
+                q3: "I miei dati finanziari sono al sicuro?",
+                a3: "<strong>Sì.</strong> Tutte le connessioni di terze parti sono esplicitamente in \"Sola lettura\". Non possiamo spostare i tuoi soldi. Utilizziamo Plaid per una sicurezza a livello bancario e tutte le connessioni sono tokenizzate. Inoltre, le tue intuizioni personalizzate sull'IA sono generate localmente sull'hardware del tuo telefono, garantendo che le tue metriche finanziarie non tocchino mai un server cloud LLM di terze parti.",
+                q4: "Quindi come crittografate i dati?",
+                a4: "Utilizziamo un'architettura ibrida sicura. L'app utilizza l'autenticazione anonima, il che significa che non vediamo né memorizziamo mai le tue password. I dati della sessione attiva sono bloccati localmente all'interno del Keystore supportato dall'hardware del dispositivo. I token OAuth necessari utilizzati per le sincronizzazioni in background sono archiviati sul nostro backend sicuro all'interno di un database PostgreSQL crittografato.",
+                q5: "Perché eaZSt è solo per Android?",
+                a5: "Il rigido ecosistema iOS di Apple e le restrittive linee guida per gli sviluppatori bloccano gli esatti processi in background e i ricevitori di eventi a livello di sistema necessari per creare le nostre principali funzionalità di \"monitoraggio del sonno\". Android rispetta gli sviluppatori e offre la libertà necessaria per creare un'automazione in background potente e senza restrizioni.",
+                q6: "Quali dati di YouTube utilizzate?",
+                a6: "Richiediamo l'accesso in sola lettura ai metadati del tuo canale YouTube, alle entrate stimate (tramite YouTube Analytics) e agli abbonamenti al canale. Questi dati vengono utilizzati esclusivamente per calcolare lo slancio delle tue entrate notturne e generare il tuo report mattutino personalizzato.",
+                q7: "Come posso revocare l'accesso ai dati di Google in seguito?",
+                a7: "Puoi revocare l'accesso di eaZSt al tuo account Google in qualsiasi momento visitando le <a href=\"https://myaccount.google.com/permissions\" target=\"_blank\">Impostazioni di sicurezza</a> del tuo account Google. In alternativa, puoi utilizzare il pulsante \"Disconnetti\" nell'hub delle connessioni dell'app per interrompere istantaneamente il collegamento e cancellare i token locali.",
+                q8: "Ho bisogno di un account per usare eaZSt?",
+                a8: "No. eaZSt utilizza l'autenticazione anonima a livello di dispositivo. Non è necessario fornire un'e-mail, un numero di telefono o una password. I tuoi dati sono legati in modo sicuro al tuo dispositivo fisico.",
+                q9: "Condividete i dati utente di Google con terze parti?",
+                a9: "<strong>No.</strong> Rispettiamo rigorosamente le Norme sui dati utente dei servizi API di Google. Non condividiamo, vendiamo o facciamo intermediazione di alcun dato utente di Google verso reti pubblicitarie, broker di dati o modelli di intelligenza artificiale esterni."
             }
         };
 
         // 🚀 THE TRANSLATION ENGINE
         function loadLanguage() {
-            // Read their choice from the index.html page
             const langCode = localStorage.getItem('eazst_lang') || 'en';
             
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[langCode] && translations[langCode][key]) {
-                    // We use innerHTML so the <strong> tags in A3 are preserved!
                     el.innerHTML = translations[langCode][key];
                 }
             });
         }
 
-        // Fire instantly when the page loads!
         loadLanguage();
 
         // The Accordion Logic
@@ -312,7 +431,6 @@
                 // If it wasn't active, open it
                 if (!isActive) {
                     faqItem.classList.add('active');
-                    // Recalculate height dynamically (crucial since translated text heights vary!)
                     wrapper.style.maxHeight = (wrapper.scrollHeight + 20) + "px"; 
                 }
             });

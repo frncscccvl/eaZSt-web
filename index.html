@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eaZSt | Android App</title>
+    
+    <!-- Basic SEO -->
+    <title>eaZSt | Passive Income Tracker & AI for Creators</title>
+    <meta name="description" content="eaZSt visualizes and tracks passive income made while asleep. Connect YouTube, Stripe, and more with a localized AI Engine.">
+    <link rel="icon" type="image/png" href="icon_.png">
+
+    <!-- Open Graph / Discord / iMessage Rich Preview Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eaz.st/">
+    <meta property="og:title" content="eaZSt | Analytics & AI">
+    <meta property="og:description" content="Track your passive income while you sleep. The ultimate dopamine hit.">
+    <meta property="og:image" content="https://eaz.st/icon_.png">
+
     <style>
         :root {
             --bg-color: #121212;
             --card-color: #1E1E1E;
             --text-main: #FFFFFF;
             --text-muted: #A0A0A0;
-            --accent-color: #FFFFFF;
+            --accent-color: #2979FF; 
             --border-color: #333333;
         }
 
@@ -33,7 +45,7 @@
             border-radius: 24px;
             border: 1px solid var(--border-color);
             text-align: center;
-            max-width: 420px;
+            max-width: 460px;
             width: 100%;
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
         }
@@ -41,58 +53,95 @@
         .icon-container {
             width: 80px;
             height: 80px;
-            margin: 0 auto 24px auto;
+            margin: 0 auto 16px auto;
         }
 
         .app-icon {
             width: 100%;
             height: 100%;
-            border-radius: 20%; /* Matches standard app icon squircle */
+            border-radius: 20%;
             object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
 
         h1 {
-            font-size: 24px;
-            margin: 0 0 12px 0;
-            font-weight: 700;
+            font-size: 28px;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+            letter-spacing: 0.5px;
         }
 
-        p {
+        .tagline {
             color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 0 0 24px 0;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+        }
+
+        /* 🚀 NEW: The Compliance Box for Google Reviewers */
+        .purpose-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .purpose-box h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            margin: 0 0 8px 0;
+        }
+
+        .purpose-box p {
+            font-size: 14px;
+            color: #CCCCCC;
+            margin: 0;
+            line-height: 1.5;
         }
 
         .qr-placeholder {
             background-color: #FFFFFF;
-            padding: 16px;
-            border-radius: 12px;
+            padding: 12px;
+            border-radius: 16px;
             display: inline-block;
             margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .qr-placeholder img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             display: block;
         }
 
         .download-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: var(--text-main);
             color: var(--bg-color);
-            padding: 14px 24px;
+            padding: 12px 24px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: opacity 0.2s ease;
-            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            margin-bottom: 24px;
         }
 
         .download-btn:hover {
-            opacity: 0.85;
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
         .footer-links {
@@ -107,20 +156,12 @@
         }
 
         .footer-links a:hover {
-            color: var(--text-main);
-            text-decoration: underline;
+            color: var(--accent-color);
         }
 
         .footer-links span {
             color: #444;
             margin: 0 8px;
-        }
-
-        .footer-note {
-            font-size: 11px;
-            color: #555;
-            margin: 0;
-            line-height: 1.4;
         }
     </style>
 </head>
@@ -131,15 +172,25 @@
             <img src="icon_.png" alt="eaZSt Icon" class="app-icon">
         </div>
 
-        <!-- <h1>eaZSt</h1> -->
-        
-        <p>eaZSt visualizes and tracks passive income made while asleep. Scope analytics + log real-time income events, plus a localized AI Engine widget. An ultimate dopamine hit!</p>
+        <h1>eaZSt</h1>
+        <p class="tagline">Visualize and track passive income made while asleep.</p>
 
-        <div class="qr-placeholder">
-            <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.visibility='hidden'">
+        <!-- 🚀 Google Trust & Safety App Purpose Box -->
+        <div class="purpose-box">
+            <h3>App Purpose & Integration</h3>
+            <p>eaZSt is an analytics dashboard built for creators. By securely connecting to platforms like <strong>YouTube</strong> and <strong>Google AdSense</strong>, the app aggregates your overnight ad revenue, channel memberships, and video metrics. Our localized, on-device AI engine then synthesizes this data into a morning financial report—helping you track your passive income momentum with complete privacy.</p>
         </div>
 
-        <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">Download eaZSt today</a>
+        <div class="qr-placeholder">
+            <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.display='none'">
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4,2.5V21.5L18.4,12L4,2.5M5.5,5.4L14.7,11.5L5.5,18.6V5.4M16.1,10.6L19.5,12L16.1,13.4L15.3,12L16.1,10.6Z" />
+            </svg>
+            Get it on Google Play
+        </a>
         
         <div class="footer-links">
             <a href="/tos.html">Terms of Service</a>

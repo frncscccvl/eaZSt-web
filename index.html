@@ -249,14 +249,42 @@
             margin: 0 8px;
         }
 
-        @media (max-width: 400px) {
+        /* 🚀 MOBILE OPTIMIZATIONS */
+        @media (max-width: 520px) {
+            .card {
+                /* Extra top padding prevents the Language/FAQ buttons from overlapping the app icon */
+                padding: 64px 20px 24px 20px; 
+                border-radius: 20px;
+                border: none; /* Looks cleaner on small screens */
+            }
+
+            .top-actions {
+                top: 16px;
+                right: 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .tagline {
+                font-size: 15px;
+            }
+
             .split-row {
                 flex-direction: column;
+                margin-bottom: 20px;
             }
+
+            .purpose-box {
+                /* Centers the text and removes the awkward jagged shapes on mobile */
+                text-align: center; 
+                padding: 20px 16px;
+            }
+
             .qr-placeholder {
-                width: 100%;
-                max-width: 140px;
-                margin: 0 auto;
+                /* Hides the QR code on mobile devices (they can just tap the download button!) */
+                display: none; 
             }
         }
     </style>

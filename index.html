@@ -47,9 +47,22 @@
             width: 100%;
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
             position: relative; 
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 95vh;
+            overflow-y: auto;
         }
 
-        /* 🚀 The Top-Right Action Group */
+        .mobile-text {
+            display: none; /* Hidden by default on Desktop */
+        }
+
+        .desktop-text {
+            display: inline;
+        }
+        
         .top-actions {
             position: absolute;
             top: 24px;
@@ -250,12 +263,12 @@
         }
 
         /* 🚀 MOBILE OPTIMIZATIONS */
+                /* 🚀 3. UPDATE THE MOBILE MEDIA QUERY */
         @media (max-width: 520px) {
             .card {
-                /* Extra top padding prevents the Language/FAQ buttons from overlapping the app icon */
                 padding: 64px 20px 24px 20px; 
                 border-radius: 20px;
-                border: none; /* Looks cleaner on small screens */
+                border: none; 
             }
 
             .top-actions {
@@ -263,13 +276,8 @@
                 right: 16px;
             }
 
-            h1 {
-                font-size: 26px;
-            }
-
-            .tagline {
-                font-size: 15px;
-            }
+            h1 { font-size: 26px; }
+            .tagline { font-size: 15px; }
 
             .split-row {
                 flex-direction: column;
@@ -277,15 +285,17 @@
             }
 
             .purpose-box {
-                /* Centers the text and removes the awkward jagged shapes on mobile */
-                text-align: left; 
+                text-align: center; 
                 padding: 20px 16px;
             }
 
             .qr-placeholder {
-                /* Hides the QR code on mobile devices (they can just tap the download button!) */
                 display: none; 
             }
+
+            /* Hides the long text, shows the short text! */
+            .desktop-text { display: none; }
+            .mobile-text { display: inline; }
         }
     </style>
 </head>
@@ -333,7 +343,8 @@
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">
-            <span data-i18n="downloadBtn">Download eaZSt today with Google Play</span>
+            <span class="desktop-text" data-i18n="downloadBtnDesktop">Download eaZSt today with Google Play</span>
+            <span class="mobile-text" data-i18n="downloadBtnMobile">Download eaZSt today</span>
         </a>
         
         <div class="footer-links">
@@ -351,35 +362,40 @@
                 tagline: "Moneybags, not eyebags",
                 purposeTitle: "App Purpose",
                 purposeDesc: "eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services such as Twitch, YouTube, Shopify and more.",
-                downloadBtn: "Download eaZSt today with Google Play"
+                downloadBtnDesktop: "Download eaZSt today with Google Play",
+                downloadBtnMobile: "Download eaZSt today"
             },
             es: {
                 label: "ES",
                 tagline: "Bolsas de dinero, no ojeras",
                 purposeTitle: "Propósito de la App",
                 purposeDesc: "eaZSt, la aplicación para Android, visualiza y rastrea los ingresos pasivos generados mientras duermes. Conecta de forma segura servicios como Twitch, YouTube, Shopify y más.",
-                downloadBtn: "Descarga eaZSt hoy en Google Play"
+                downloadBtnDesktop: "Descarga eaZSt hoy en Google Play",
+                downloadBtnMobile: "Descarga eaZSt hoy"
             },
             ja: {
                 label: "JA",
                 tagline: "目の下のクマより、お金の詰まった袋を",
                 purposeTitle: "アプリの目的",
                 purposeDesc: "AndroidアプリのeaZStは、睡眠中に得た不労所得を可視化して追跡します。Twitch、YouTube、Shopifyなどのサービスを安全に接続します。",
-                downloadBtn: "Google PlayでeaZStを今すぐダウンロード"
+                downloadBtnDesktop: "Google PlayでeaZStをダウンロード",
+                downloadBtnMobile: "eaZStをダウンロード"
             },
             fr: {
                 label: "FR",
                 tagline: "Des sacs d'argent, pas des cernes",
                 purposeTitle: "Objectif de l'application",
                 purposeDesc: "eaZSt, l'application Android, visualise et suit les revenus passifs générés pendant votre sommeil. Connectez en toute sécurité des services tels que Twitch, YouTube, Shopify et plus encore.",
-                downloadBtn: "Téléchargez eaZSt sur Google Play"
+                downloadBtnDesktop: "Téléchargez eaZSt sur Google Play",
+                downloadBtnMobile: "Téléchargez eaZSt"
             },
             it: {
                 label: "IT",
                 tagline: "Sacchi di soldi, non borse sotto gli occhi",
                 purposeTitle: "Scopo dell'app",
                 purposeDesc: "eaZSt, l'app per Android, visualizza e traccia le entrate passive generate mentre dormi. Connetti in modo sicuro servizi come Twitch, YouTube, Shopify e altri.",
-                downloadBtn: "Scarica eaZSt su Google Play"
+                downloadBtnDesktop: "Scarica eaZSt su Google Play",
+                downloadBtnMobile: "Scarica eaZSt oggi"
             }
         };
 

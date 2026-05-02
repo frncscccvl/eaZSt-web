@@ -29,24 +29,22 @@
             box-sizing: border-box;
         }
 
-        /* 🚀 The Main Box (Matches index.html exactly!) */
+        /* 🚀 Matches index.html exactly to prevent jarring jumps */
         .card {
             background-color: var(--card-color);
             padding: 40px 32px 24px 32px;
             border-radius: 24px;
             border: 1px solid var(--border-color);
             text-align: center;
-            max-width: 480px;
+            max-width: 460px; /* Matched index.html */
             width: 100%;
-            height: 80vh; /* Fixed height for scrolling */
-            max-height: 700px;
+            height: 620px; /* Fixed height creates the perfect square/box */
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
             position: relative;
             display: flex;
             flex-direction: column;
         }
 
-        /* 🚀 Top Left Back Button */
         .back-link {
             position: absolute;
             top: 24px;
@@ -78,17 +76,15 @@
             letter-spacing: 0.5px;
         }
 
-        /* 🚀 The Scrollable Container */
         .faq-container {
             flex: 1;
             overflow-y: auto;
-            padding-right: 8px; /* Room for scrollbar */
+            padding-right: 8px; 
             text-align: left;
         }
 
-        /* Custom Scrollbar for a native app feel */
         .faq-container::-webkit-scrollbar {
-            width: 6px;
+            width: 4px;
         }
         .faq-container::-webkit-scrollbar-track {
             background: transparent;
@@ -98,11 +94,10 @@
             border-radius: 10px;
         }
 
-        /* 🚀 The Pill-Shaped FAQ Items */
         .faq-item {
             background-color: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
-            border-radius: 24px; /* The Pill Shape */
+            border-radius: 20px;
             margin-bottom: 12px;
             overflow: hidden;
             transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -113,10 +108,9 @@
             border-color: #555;
         }
 
-        /* The clickable Question */
         .faq-question {
             width: 100%;
-            padding: 18px 20px;
+            padding: 16px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -132,6 +126,8 @@
             height: 20px;
             fill: var(--text-muted);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink: 0;
+            margin-left: 12px;
         }
 
         .faq-item.active .faq-icon {
@@ -139,7 +135,6 @@
             fill: var(--text-main);
         }
 
-        /* The hidden Answer */
         .faq-answer-wrapper {
             max-height: 0;
             overflow: hidden;
@@ -153,19 +148,14 @@
             line-height: 1.5;
         }
 
-        .faq-answer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        .faq-answer a:hover {
-            text-decoration: underline;
+        .faq-answer strong {
+            color: var(--text-main);
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <!-- Return to Home -->
         <a href="/" class="back-link">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
             Back
@@ -173,57 +163,69 @@
 
         <h1>FAQ</h1>
 
-        <!-- The Scrollable Area -->
         <div class="faq-container">
 
-            <!-- Pill 1 -->
+            <!-- Question 1 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Why does eaZSt need access to my YouTube / Google AdSense accounts?
+                    Who is eaZSt for?
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer">
-                        eaZSt is a passive income dashboard. We request read-only access to your YouTube and AdSense metrics so the app can securely aggregate your overnight video revenue, channel memberships, and page views. This allows you to wake up to a personalized morning report showing exactly what your portfolio did while you were sleeping.
+                        eaZSt is built for content creators, streamers, and digital entrepreneurs who generate passive income. If you earn money through YouTube, Twitch, Patreon, Shopify, or automated bank deposits and want the ultimate "dopamine hit" of seeing what you earned while you slept, this app is for you.
                     </div>
                 </div>
             </div>
 
-            <!-- Pill 2 -->
+            <!-- Question 2 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Do you sell my data?
+                    What are your thoughts on internet privacy?
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer">
-                        <strong>Absolutely not.</strong> Your financial data is securely retrieved for your own personal visualization. We do not sell, broker, or share your data with advertising networks, third-party data brokers, or external AI trainers. For full details, see our <a href="/privacy.html">Privacy Policy</a>.
+                        We believe your data belongs strictly to you. In an era where user data is the product, we take the opposite approach: strict data minimization. We do not sell your data, we do not broker it to ad-networks, and we do not use your financial history to train global AI models.
                     </div>
                 </div>
             </div>
 
-            <!-- Pill 3 -->
+            <!-- Question 3 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Is my data safe with the AI feature?
+                    Is my financial data secure?
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer">
-                        Yes. eaZSt uses <strong>Gemma</strong>, a localized, on-device AI. Your financial metrics and questions are processed directly on your phone's physical hardware (edge computing). Your data never leaves your device to hit cloud LLM APIs.
+                        <strong>Yes.</strong> All third-party connections are explicitly "Read-Only". We cannot move your money. We use Plaid for bank-level security, and all connections are tokenized. Furthermore, your personalized AI insights are generated locally on your phone's hardware, ensuring your financial metrics never touch a third-party LLM cloud server.
                     </div>
                 </div>
             </div>
 
-            <!-- Pill 4 -->
+            <!-- Question 4 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    How do I delete my data?
+                    So how do you encrypt data?
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer">
-                        You own your data. You can sever connections individually inside the app's Connections Hub. For a complete account wipe, open the app, go to Settings -> About, and tap the App Version 4 times. This permanently deletes your local tokens, anonymous database records, and server webhook maps instantly.
+                        We utilize a secure hybrid architecture. The app uses anonymous authentication, meaning we never see or store your passwords. Your active session data is locked locally inside your device's hardware-backed Keystore. The necessary OAuth tokens used for background syncs are stored on our secure backend inside an encrypted PostgreSQL database.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    Why is eaZSt only for Android?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        Apple's rigid iOS ecosystem and restrictive developer guidelines block the exact background processes and system-level event receivers required to build our core "sleep tracking" features. Android respects developers and provides the necessary freedom to build powerful, unrestricted background automation.
                     </div>
                 </div>
             </div>
@@ -231,7 +233,6 @@
         </div>
     </div>
 
-    <!-- 🚀 The lightweight JavaScript to handle the smooth accordion expansion -->
     <script>
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
@@ -239,7 +240,7 @@
                 const wrapper = faqItem.querySelector('.faq-answer-wrapper');
                 const isActive = faqItem.classList.contains('active');
 
-                // Close all other open items first (optional, but keeps it clean)
+                // Close all other open items
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                     item.querySelector('.faq-answer-wrapper').style.maxHeight = null;
@@ -248,7 +249,8 @@
                 // If it wasn't active, open it
                 if (!isActive) {
                     faqItem.classList.add('active');
-                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                    // Add extra padding to scrollHeight to ensure bottom text doesn't cut off
+                    wrapper.style.maxHeight = (wrapper.scrollHeight + 20) + "px"; 
                 }
             });
         });

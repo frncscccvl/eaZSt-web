@@ -43,10 +43,10 @@
             border-radius: 24px;
             border: 1px solid var(--border-color);
             text-align: center;
-            max-width: 480px; /* Slightly wider to fit the side-by-side elements nicely */
+            max-width: 480px; 
             width: 100%;
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
-            position: relative; /* Allows absolute positioning for the FAQ link */
+            position: relative; 
         }
 
         /* 🚀 The Top-Right Action Group */
@@ -161,11 +161,11 @@
             display: flex;
             gap: 16px;
             margin-bottom: 24px;
-            align-items: stretch; /* Forces both children to be the exact same height */
+            align-items: stretch; 
         }
 
         .purpose-box {
-            flex: 1; /* Takes up the remaining space */
+            flex: 1; 
             background-color: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: 16px;
@@ -192,7 +192,7 @@
         }
 
         .qr-placeholder {
-            width: 120px; /* Fixed width so it doesn't crush the text */
+            width: 120px; 
             background-color: #FFFFFF;
             padding: 10px;
             border-radius: 16px;
@@ -229,12 +229,6 @@
             transform: scale(1.02);
         }
 
-        .download-btn svg {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-
         .footer-links {
             margin-bottom: 8px;
             font-size: 12px;
@@ -255,7 +249,6 @@
             margin: 0 8px;
         }
 
-        /* Stack them on very small phone screens to prevent text squishing */
         @media (max-width: 400px) {
             .split-row {
                 flex-direction: column;
@@ -271,7 +264,6 @@
 <body>
 
     <div class="card">
-        <div class="card">
         <!-- 🚀 Top Right Actions -->
         <div class="top-actions">
             <!-- Language Dropdown -->
@@ -296,39 +288,13 @@
         </div>
 
         <h1>eaZSt</h1>
-        <p class="tagline" data-i18n="tagline">Visualize and track passive income made while asleep.</p>
-
-        <div class="split-row">
-            <div class="purpose-box">
-                <h3 data-i18n="purposeTitle">App Purpose</h3>
-                <p data-i18n="purposeDesc">eaZSt securely connects to YouTube and AdSense to aggregate your overnight metrics and revenue. Our on-device AI generates a private morning report.</p>
-            </div>
-
-            <div class="qr-placeholder">
-                <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.display='none'">
-            </div>
-        </div>
-
-        <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4,2.5V21.5L18.4,12L4,2.5M5.5,5.4L14.7,11.5L5.5,18.6V5.4M16.1,10.6L19.5,12L16.1,13.4L15.3,12L16.1,10.6Z" />
-            </svg>
-            <span data-i18n="downloadBtn">Get it on Google Play</span>
-        </a>
-
-        <div class="icon-container">
-            <img src="icon_.png" alt="eaZSt Icon" class="app-icon">
-        </div>
-
-        <h1>eaZSt</h1>
-        <p class="tagline">Moneybags, not eyebags</p>
+        <p class="tagline" data-i18n="tagline">Moneybags, not eyebags</p>
 
         <!-- 🚀 Side-by-Side Flex Row -->
         <div class="split-row">
             <div class="purpose-box">
-                <h3>App Purpose</h3>
-                <!-- Condensed text, points to FAQ for more -->
-                <p>eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services such as Twitch, YouTube, Shopify and more.</p>
+                <h3 data-i18n="purposeTitle">App Purpose</h3>
+                <p data-i18n="purposeDesc">eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services such as Twitch, YouTube, Shopify and more.</p>
             </div>
 
             <div class="qr-placeholder">
@@ -337,10 +303,7 @@
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">
-            <!-- <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4,2.5V21.5L18.4,12L4,2.5M5.5,5.4L14.7,11.5L5.5,18.6V5.4M16.1,10.6L19.5,12L16.1,13.4L15.3,12L16.1,10.6Z" />
-            </svg> -->
-            Download eaZSt today with Google Play
+            <span data-i18n="downloadBtn">Download eaZSt today with Google Play</span>
         </a>
         
         <div class="footer-links">
@@ -355,24 +318,24 @@
         const translations = {
             en: {
                 label: "EN",
-                tagline: "Visualize and track passive income made while asleep.",
+                tagline: "Moneybags, not eyebags",
                 purposeTitle: "App Purpose",
-                purposeDesc: "eaZSt securely connects to YouTube and AdSense to aggregate your overnight metrics and revenue. Our on-device AI generates a private morning report.",
-                downloadBtn: "Get it on Google Play"
+                purposeDesc: "eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services such as Twitch, YouTube, Shopify and more.",
+                downloadBtn: "Download eaZSt today with Google Play"
             },
             es: {
                 label: "ES",
-                tagline: "Visualiza y rastrea los ingresos pasivos generados mientras duermes.",
+                tagline: "Bolsas de dinero, no ojeras",
                 purposeTitle: "Propósito de la App",
-                purposeDesc: "eaZSt se conecta de forma segura a YouTube y AdSense para agregar tus métricas e ingresos nocturnos. Nuestra IA en el dispositivo genera un informe matutino privado.",
-                downloadBtn: "Descargar en Google Play"
+                purposeDesc: "eaZSt, la aplicación para Android, visualiza y rastrea los ingresos pasivos generados mientras duermes. Conecta de forma segura servicios como Twitch, YouTube, Shopify y más.",
+                downloadBtn: "Descarga eaZSt hoy en Google Play"
             },
             ja: {
                 label: "JA",
-                tagline: "睡眠中に得た不労所得を可視化して追跡します。",
+                tagline: "目の下のクマより、お金の詰まった袋を",
                 purposeTitle: "アプリの目的",
-                purposeDesc: "eaZStはYouTubeやAdSenseと安全に接続し、夜間の指標と収益を集計します。オンデバイスAIがプライベートな朝のレポートを生成します。",
-                downloadBtn: "Google Play で手に入れよう"
+                purposeDesc: "AndroidアプリのeaZStは、睡眠中に得た不労所得を可視化して追跡します。Twitch、YouTube、Shopifyなどのサービスを安全に接続します。",
+                downloadBtn: "Google PlayでeaZStを今すぐダウンロード"
             }
         };
 

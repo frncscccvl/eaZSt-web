@@ -193,4 +193,66 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Do you sell my data?
-                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        <strong>Absolutely not.</strong> Your financial data is securely retrieved for your own personal visualization. We do not sell, broker, or share your data with advertising networks, third-party data brokers, or external AI trainers. For full details, see our <a href="/privacy.html">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pill 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is my data safe with the AI feature?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        Yes. eaZSt uses <strong>Gemma</strong>, a localized, on-device AI. Your financial metrics and questions are processed directly on your phone's physical hardware (edge computing). Your data never leaves your device to hit cloud LLM APIs.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pill 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I delete my data?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </div>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        You own your data. You can sever connections individually inside the app's Connections Hub. For a complete account wipe, open the app, go to Settings -> About, and tap the App Version 4 times. This permanently deletes your local tokens, anonymous database records, and server webhook maps instantly.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🚀 The lightweight JavaScript to handle the smooth accordion expansion -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const wrapper = faqItem.querySelector('.faq-answer-wrapper');
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other open items first (optional, but keeps it clean)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer-wrapper').style.maxHeight = null;
+                });
+
+                // If it wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

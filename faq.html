@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,16 +29,15 @@
             box-sizing: border-box;
         }
 
-        /* 🚀 Matches index.html exactly to prevent jarring jumps */
         .card {
             background-color: var(--card-color);
             padding: 40px 32px 24px 32px;
             border-radius: 24px;
             border: 1px solid var(--border-color);
             text-align: center;
-            max-width: 460px; /* Matched index.html */
+            max-width: 460px; 
             width: 100%;
-            height: 620px; /* Fixed height creates the perfect square/box */
+            height: 620px; 
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
             position: relative;
             display: flex;
@@ -158,21 +157,21 @@
     <div class="card">
         <a href="/" class="back-link">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-            Back
+            <span data-i18n="backBtn">Back</span>
         </a>
 
-        <h1>FAQ</h1>
+        <h1 data-i18n="title">FAQ</h1>
 
         <div class="faq-container">
 
             <!-- Question 1 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Who is eaZSt for?
+                    <span data-i18n="q1">Who is eaZSt for?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
-                    <div class="faq-answer">
+                    <div class="faq-answer" data-i18n="a1">
                         eaZSt is built for content creators, streamers, and digital entrepreneurs who generate passive income. If you earn money through YouTube, Twitch, Patreon, Shopify, or automated bank deposits and want the ultimate "dopamine hit" of seeing what you earned while you slept, this app is for you.
                     </div>
                 </div>
@@ -181,11 +180,11 @@
             <!-- Question 2 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    What are your thoughts on internet privacy?
+                    <span data-i18n="q2">What are your thoughts on internet privacy?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
-                    <div class="faq-answer">
+                    <div class="faq-answer" data-i18n="a2">
                         We believe your data belongs strictly to you. In an era where user data is the product, we take the opposite approach: strict data minimization. We do not sell your data, we do not broker it to ad-networks, and we do not use your financial history to train global AI models.
                     </div>
                 </div>
@@ -194,11 +193,11 @@
             <!-- Question 3 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Is my financial data secure?
+                    <span data-i18n="q3">Is my financial data secure?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
-                    <div class="faq-answer">
+                    <div class="faq-answer" data-i18n="a3">
                         <strong>Yes.</strong> All third-party connections are explicitly "Read-Only". We cannot move your money. We use Plaid for bank-level security, and all connections are tokenized. Furthermore, your personalized AI insights are generated locally on your phone's hardware, ensuring your financial metrics never touch a third-party LLM cloud server.
                     </div>
                 </div>
@@ -207,11 +206,11 @@
             <!-- Question 4 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    So how do you encrypt data?
+                    <span data-i18n="q4">So how do you encrypt data?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
-                    <div class="faq-answer">
+                    <div class="faq-answer" data-i18n="a4">
                         We utilize a secure hybrid architecture. The app uses anonymous authentication, meaning we never see or store your passwords. Your active session data is locked locally inside your device's hardware-backed Keystore. The necessary OAuth tokens used for background syncs are stored on our secure backend inside an encrypted PostgreSQL database.
                     </div>
                 </div>
@@ -220,11 +219,11 @@
             <!-- Question 5 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    Why is eaZSt only for Android?
+                    <span data-i18n="q5">Why is eaZSt only for Android?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                 </div>
                 <div class="faq-answer-wrapper">
-                    <div class="faq-answer">
+                    <div class="faq-answer" data-i18n="a5">
                         Apple's rigid iOS ecosystem and restrictive developer guidelines block the exact background processes and system-level event receivers required to build our core "sleep tracking" features. Android respects developers and provides the necessary freedom to build powerful, unrestricted background automation.
                     </div>
                 </div>
@@ -234,6 +233,70 @@
     </div>
 
     <script>
+        // 🚀 THE TRANSLATION DICTIONARY
+        const translations = {
+            en: {
+                backBtn: "Back",
+                title: "FAQ",
+                q1: "Who is eaZSt for?",
+                a1: "eaZSt is built for content creators, streamers, and digital entrepreneurs who generate passive income. If you earn money through YouTube, Twitch, Patreon, Shopify, or automated bank deposits and want the ultimate \"dopamine hit\" of seeing what you earned while you slept, this app is for you.",
+                q2: "What are your thoughts on internet privacy?",
+                a2: "We believe your data belongs strictly to you. In an era where user data is the product, we take the opposite approach: strict data minimization. We do not sell your data, we do not broker it to ad-networks, and we do not use your financial history to train global AI models.",
+                q3: "Is my financial data secure?",
+                a3: "<strong>Yes.</strong> All third-party connections are explicitly \"Read-Only\". We cannot move your money. We use Plaid for bank-level security, and all connections are tokenized. Furthermore, your personalized AI insights are generated locally on your phone's hardware, ensuring your financial metrics never touch a third-party LLM cloud server.",
+                q4: "So how do you encrypt data?",
+                a4: "We utilize a secure hybrid architecture. The app uses anonymous authentication, meaning we never see or store your passwords. Your active session data is locked locally inside your device's hardware-backed Keystore. The necessary OAuth tokens used for background syncs are stored on our secure backend inside an encrypted PostgreSQL database.",
+                q5: "Why is eaZSt only for Android?",
+                a5: "Apple's rigid iOS ecosystem and restrictive developer guidelines block the exact background processes and system-level event receivers required to build our core \"sleep tracking\" features. Android respects developers and provides the necessary freedom to build powerful, unrestricted background automation."
+            },
+            es: {
+                backBtn: "Volver",
+                title: "Preguntas Frecuentes",
+                q1: "¿Para quién es eaZSt?",
+                a1: "eaZSt está diseñado para creadores de contenido, streamers y emprendedores digitales que generan ingresos pasivos. Si ganas dinero a través de YouTube, Twitch, Patreon, Shopify o depósitos bancarios automatizados y quieres el \"subidón de dopamina\" definitivo de ver lo que ganaste mientras dormías, esta app es para ti.",
+                q2: "¿Qué opinan sobre la privacidad en internet?",
+                a2: "Creemos que tus datos te pertenecen estrictamente a ti. En una era donde los datos del usuario son el producto, tomamos el enfoque opuesto: estricta minimización de datos. No vendemos tus datos, no los intermediamos a redes publicitarias y no usamos tu historial financiero para entrenar modelos de IA globales.",
+                q3: "¿Están seguros mis datos financieros?",
+                a3: "<strong>Sí.</strong> Todas las conexiones de terceros son explícitamente de \"Solo Lectura\". No podemos mover tu dinero. Usamos Plaid para seguridad a nivel bancario y todas las conexiones están tokenizadas. Además, tus perspectivas de IA personalizadas se generan localmente en el hardware de tu teléfono, asegurando que tus métricas financieras nunca toquen un servidor de LLM en la nube de terceros.",
+                q4: "Entonces, ¿cómo encriptan los datos?",
+                a4: "Utilizamos una arquitectura híbrida segura. La aplicación utiliza autenticación anónima, lo que significa que nunca vemos ni almacenamos tus contraseñas. Los datos de tu sesión activa están bloqueados localmente dentro del Keystore respaldado por hardware de tu dispositivo. Los tokens OAuth necesarios utilizados para las sincronizaciones en segundo plano se almacenan en nuestro backend seguro dentro de una base de datos PostgreSQL encriptada.",
+                q5: "¿Por qué eaZSt es solo para Android?",
+                a5: "El rígido ecosistema de iOS de Apple y las restrictivas pautas para desarrolladores bloquean los procesos exactos en segundo plano y los receptores de eventos a nivel de sistema requeridos para construir nuestras funciones principales de \"seguimiento del sueño\". Android respeta a los desarrolladores y proporciona la libertad necesaria para construir una automatización en segundo plano potente y sin restricciones."
+            },
+            ja: {
+                backBtn: "戻る",
+                title: "よくある質問",
+                q1: "eaZStは誰向けですか？",
+                a1: "eaZStは、不労所得を生み出すコンテンツクリエイター、ストリーマー、デジタル起業家向けに作られています。YouTube、Twitch、Patreon、Shopify、または自動の銀行振込を通じて収入を得ており、寝ている間に稼いだ額を確認するという最高の「ドーパミン体験」を求めているなら、このアプリはあなたのためのものです。",
+                q2: "インターネットのプライバシーについてどう考えていますか？",
+                a2: "私たちは、あなたのデータは厳密にあなたのものであると信じています。ユーザーデータが商品となる時代において、私たちは全く逆のアプローチ、つまり厳格なデータ最小化をとっています。私たちはあなたのデータを販売せず、広告ネットワークに仲介せず、あなたの財務履歴をグローバルAIモデルのトレーニングに使用することはありません。",
+                q3: "財務データは安全ですか？",
+                a3: "<strong>はい。</strong>すべてのサードパーティ接続は明示的に「読み取り専用」です。私たちがあなたのお金を動かすことはできません。銀行レベルのセキュリティのためにPlaidを使用しており、すべての接続はトークン化されています。さらに、パーソナライズされたAIインサイトはスマートフォンのハードウェア上でローカルに生成されるため、財務指標がサードパーティのLLMクラウドサーバーに触れることは絶対にありません。",
+                q4: "では、どのようにデータを暗号化していますか？",
+                a4: "安全なハイブリッドアーキテクチャを利用しています。アプリは匿名認証を使用するため、パスワードを見たり保存したりすることはありません。アクティブなセッションデータは、デバイスのハードウェアに裏付けられたKeystore内にローカルでロックされます。バックグラウンド同期に必要なOAuthトークンは、暗号化されたPostgreSQLデータベース内の安全なバックエンドに保存されます。",
+                q5: "なぜeaZStはAndroid専用なのですか？",
+                a5: "Appleの厳格なiOSエコシステムと制限の多い開発者ガイドラインは、私たちのコアである「睡眠追跡」機能を構築するために必要な、正確なバックグラウンドプロセスとシステムレベルのイベントレシーバーをブロックします。Androidは開発者を尊重し、強力で制限のないバックグラウンド自動化を構築するために必要な自由を提供してくれます。"
+            }
+        };
+
+        // 🚀 THE TRANSLATION ENGINE
+        function loadLanguage() {
+            // Read their choice from the index.html page
+            const langCode = localStorage.getItem('eazst_lang') || 'en';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[langCode] && translations[langCode][key]) {
+                    // We use innerHTML so the <strong> tags in A3 are preserved!
+                    el.innerHTML = translations[langCode][key];
+                }
+            });
+        }
+
+        // Fire instantly when the page loads!
+        loadLanguage();
+
+        // The Accordion Logic
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
@@ -249,7 +312,7 @@
                 // If it wasn't active, open it
                 if (!isActive) {
                     faqItem.classList.add('active');
-                    // Add extra padding to scrollHeight to ensure bottom text doesn't cut off
+                    // Recalculate height dynamically (crucial since translated text heights vary!)
                     wrapper.style.maxHeight = (wrapper.scrollHeight + 20) + "px"; 
                 }
             });

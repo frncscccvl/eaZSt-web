@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Basic SEO -->
     <title>eaZSt | Passive Income Tracker & AI for Creators</title>
     <meta name="description" content="eaZSt visualizes and tracks passive income made while asleep. Connect YouTube, Stripe, and more with a localized AI Engine.">
     <link rel="icon" type="image/png" href="icon_.png">
 
-    <!-- Open Graph / Discord / iMessage Rich Preview Cards -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eaz.st/">
     <meta property="og:title" content="eaZSt | Analytics & AI">
@@ -45,9 +43,32 @@
             border-radius: 24px;
             border: 1px solid var(--border-color);
             text-align: center;
-            max-width: 460px;
+            max-width: 480px; /* Slightly wider to fit the side-by-side elements nicely */
             width: 100%;
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+            position: relative; /* Allows absolute positioning for the FAQ link */
+        }
+
+        /* 🚀 The Top-Right FAQ Button */
+        .faq-link-top {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .faq-link-top:hover {
+            color: var(--text-main);
+            border-color: var(--border-color);
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .icon-container {
@@ -75,46 +96,59 @@
             color: var(--text-muted);
             font-size: 16px;
             line-height: 1.5;
-            margin: 0 0 20px 0;
+            margin: 0 0 24px 0;
         }
 
-        /* 🚀 NEW: The Compliance Box for Google Reviewers */
+        /* 🚀 The Side-by-Side Flex Layout */
+        .split-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: stretch; /* Forces both children to be the exact same height */
+        }
+
         .purpose-box {
+            flex: 1; /* Takes up the remaining space */
             background-color: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 16px;
-            margin-bottom: 24px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .purpose-box h3 {
-            font-size: 13px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-main);
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
         }
 
         .purpose-box p {
-            font-size: 14px;
+            font-size: 13px;
             color: #CCCCCC;
             margin: 0;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .qr-placeholder {
+            width: 120px; /* Fixed width so it doesn't crush the text */
             background-color: #FFFFFF;
-            padding: 12px;
+            padding: 10px;
             border-radius: 16px;
-            display: inline-block;
-            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            flex-shrink: 0;
         }
 
         .qr-placeholder img {
-            width: 130px;
-            height: 130px;
+            width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -145,7 +179,7 @@
         }
 
         .footer-links {
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             font-size: 12px;
         }
 
@@ -163,26 +197,44 @@
             color: #444;
             margin: 0 8px;
         }
+
+        /* Stack them on very small phone screens to prevent text squishing */
+        @media (max-width: 400px) {
+            .split-row {
+                flex-direction: column;
+            }
+            .qr-placeholder {
+                width: 100%;
+                max-width: 140px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <!-- 🚀 Top Right FAQ Button -->
+        <a href="/faq.html" class="faq-link-top">FAQ</a>
+
         <div class="icon-container">
             <img src="icon_.png" alt="eaZSt Icon" class="app-icon">
         </div>
 
         <h1>eaZSt</h1>
-        <p class="tagline">Visualize and track passive income made while asleep.</p>
+        <p class="tagline">Moneybags, not eyebags</p>
 
-        <!-- 🚀 Google Trust & Safety App Purpose Box -->
-        <div class="purpose-box">
-            <h3>App Purpose & Integration</h3>
-            <p>eaZSt is an analytics dashboard built for creators. By securely connecting to platforms like <strong>YouTube</strong> and <strong>Google AdSense</strong>, the app aggregates your overnight ad revenue, channel memberships, and video metrics. Our localized, on-device AI engine then synthesizes this data into a morning financial report—helping you track your passive income momentum with complete privacy.</p>
-        </div>
+        <!-- 🚀 Side-by-Side Flex Row -->
+        <div class="split-row">
+            <div class="purpose-box">
+                <h3>App Purpose</h3>
+                <!-- Condensed text, points to FAQ for more -->
+                <p>eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services suchs as Twitch, YouTube, Shopify and more.</p>
+            </div>
 
-        <div class="qr-placeholder">
-            <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.display='none'">
+            <div class="qr-placeholder">
+                <img src="qr-code.png" alt="Scan to download eaZSt" onerror="this.style.display='none'">
+            </div>
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=com.francis.eazst" class="download-btn">

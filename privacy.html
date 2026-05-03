@@ -85,7 +85,7 @@
     <div class="header-container">
         <img src="icon_.png" alt="eaZSt Logo" class="app-logo">
         <h1>Privacy Policy for eaZSt</h1>
-        <p><strong>Last Updated:</strong> April 28, 2026</p>
+        <p><strong>Last Updated:</strong> May 02, 2026</p>
     </div>
 
     <p><strong>eaZSt</strong> ("the App") is developed by <strong>FRANCIS CACCAVALE</strong> ("we," "us," or "our"). We respect your privacy and are committed to protecting it through strict data minimization and edge-computing architectures.</p>
@@ -121,24 +121,32 @@
         <li><strong>Live Event Processing:</strong> Our backend listens for live income events solely to trigger real-time push notifications to your device.</li>
     </ul>
 
-    <h3>C. Banking Services (Plaid)</h3>
+    <h3>C. Discord Community Integration</h3>
+    <p>To personalize your experience and connect you with our community, eaZSt offers an optional Discord integration.</p>
+    <ul>
+        <li><strong>Profile Data:</strong> When you authorize Discord, we request access to your basic profile information (username and avatar). This data is used strictly to display your personalized profile header within the App's settings menu.</li>
+        <li><strong>Community Access:</strong> We request the permission to add your account to the official eaZSt Discord server automatically. We do not use this permission to join any other servers, send messages on your behalf, or modify your Discord account.</li>
+        <li><strong>Data Deletion:</strong> Your Discord profile data is removed instantly from your device and our servers when you tap the "Trash" disconnect icon next to Discord in the App, or when you trigger a full account deletion.</li>
+    </ul>
+
+    <h3>D. Banking Services (Plaid)</h3>
     <p>We use Plaid Inc. ("Plaid") to securely connect your bank accounts.</p>
     <ul>
         <li>Plaid collects your login credentials directly (we never see your bank username or password).</li>
         <li>We use Plaid's secure token system to fetch read-only transaction data (specifically deposits) to calculate your income flow. Information collected by Plaid is subject to the <a href="https://plaid.com/legal/#end-user-privacy-policy" target="_blank">Plaid Privacy Policy</a>.</li>
     </ul>
 
-    <h3>D. On-Device AI Processing (Gemma Integration)</h3>
+    <h3>E. On-Device AI Processing (Gemma Integration)</h3>
     <p>To provide advanced financial insights, eaZSt utilizes a localized version of the <strong>Gemma</strong> AI model, developed by Google.</p>
     <ul>
         <li><strong>100% Local Inference:</strong> The AI engine runs locally on your device's edge hardware (CPU/GPU). When you query your financial data or chat with the AI widget, your sensitive financial metrics <strong>never leave your phone</strong>. No cloud LLM APIs are used to process your chat prompts.</li>
         <li><strong>No Model Training:</strong> Your private financial data, chat history, and third-party analytics are never used to train, fine-tune, or improve global AI models.</li>
     </ul>
 
-    <h3>E. Subscriptions & Billing</h3>
+    <h3>F. Subscriptions & Billing</h3>
     <p>Premium features are handled securely through Google Play Billing. We do not collect or store your credit card information. We only store anonymous receipt validation tokens to verify your active subscription tier.</p>
 
-    <h3>F. Biometrics & Device Identifiers</h3>
+    <h3>G. Biometrics & Device Identifiers</h3>
     <p>The App uses your device's biometric capabilities (FaceID/Fingerprint) to secure your dashboard. Biometric authentication is handled entirely by your device's OS; we only receive a secure "Unlock" signal. To route push notifications, we store an anonymous FCM (Firebase Cloud Messaging) device token.</p>
 
     <h2>3. Data Retention & Instant Account Deletion</h2>

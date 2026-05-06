@@ -50,6 +50,29 @@
             margin: auto;
         }
 
+        .toast {
+            position: fixed;
+            top: -100px; /* Hidden off-screen by default */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00C853; /* Success Green */
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            transition: top 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy drop-in effect */
+        }
+
+        .toast.show {
+            top: 24px; /* Slides down to become visible! */
+        }
+        
         .mobile-text {
             display: none; /* Hidden by default on Desktop */
         }
@@ -295,6 +318,14 @@
 </head>
 <body>
 
+    <div id="success-toast" class="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span data-i18n="toastStripeSuccess">Your Stripe account is now successfully linked!</span>
+    </div>
+
     <div class="card">
         <!-- 🚀 Top Right Actions -->
         <div class="top-actions">
@@ -357,7 +388,8 @@
                 purposeTitle: "App Purpose",
                 purposeDesc: "eaZSt, the Android app, visualizes and tracks passive income made while asleep. Securely connect services such as Twitch, YouTube, Shopify and more.",
                 downloadBtnDesktop: "Download eaZSt today with Google Play",
-                downloadBtnMobile: "Download eaZSt today"
+                downloadBtnMobile: "Download eaZSt today",
+                toastStripeSuccess: "Your Stripe account is now successfully linked!"
             },
             es: {
                 label: "ES",
@@ -365,7 +397,8 @@
                 purposeTitle: "Propósito de la App",
                 purposeDesc: "eaZSt, la aplicación para Android, visualiza y rastrea los ingresos pasivos generados mientras duermes. Conecta de forma segura servicios como Twitch, YouTube, Shopify y más.",
                 downloadBtnDesktop: "Descarga eaZSt hoy en Google Play",
-                downloadBtnMobile: "Descarga eaZSt hoy"
+                downloadBtnMobile: "Descarga eaZSt hoy",
+                toastStripeSuccess: "¡Su cuenta de Stripe ahora está vinculada exitosamente!"
             },
             ja: {
                 label: "JA",
@@ -373,7 +406,8 @@
                 purposeTitle: "アプリの目的",
                 purposeDesc: "AndroidアプリのeaZStは、睡眠中に得た不労所得を可視化して追跡します。Twitch、YouTube、Shopifyなどのサービスを安全に接続します。",
                 downloadBtnDesktop: "Google PlayでeaZStをダウンロード",
-                downloadBtnMobile: "eaZStをダウンロード"
+                downloadBtnMobile: "eaZStをダウンロード",
+                toastStripeSuccess: "Stripeアカウントが正常にリンクされました！"
             },
             fr: {
                 label: "FR",
@@ -381,7 +415,8 @@
                 purposeTitle: "Objectif de l'application",
                 purposeDesc: "eaZSt, l'application Android, visualise et suit les revenus passifs générés pendant votre sommeil. Connectez en toute sécurité des services tels que Twitch, YouTube, Shopify et plus encore.",
                 downloadBtnDesktop: "Téléchargez eaZSt sur Google Play",
-                downloadBtnMobile: "Téléchargez eaZSt"
+                downloadBtnMobile: "Téléchargez eaZSt",
+                toastStripeSuccess: "Votre compte Stripe est désormais lié avec succès !"
             },
             it: {
                 label: "IT",
@@ -389,7 +424,8 @@
                 purposeTitle: "Scopo dell'app",
                 purposeDesc: "eaZSt, l'app per Android, visualizza e traccia le entrate passive generate mentre dormi. Connetti in modo sicuro servizi come Twitch, YouTube, Shopify e altri.",
                 downloadBtnDesktop: "Scarica eaZSt su Google Play",
-                downloadBtnMobile: "Scarica eaZSt oggi"
+                downloadBtnMobile: "Scarica eaZSt oggi",
+                toastStripeSuccess: "Il tuo account Stripe è stato collegato con successo!"
             }
         };
 
@@ -413,6 +449,26 @@
         // Auto-load their saved language on boot
         const savedLang = localStorage.getItem('eazst_lang') || 'en';
         setLanguage(savedLang);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Check if Stripe sent us here with a success flag
+            if (urlParams.get('stripe_success') === 'true') {
+                const toast = document.getElementById('success-toast');
+                
+                // Slide the toast down
+                toast.classList.add('show');
+                
+                // Clean the ugly "?stripe_success=true" out of the URL bar without reloading the page!
+                window.history.replaceState(null, '', window.location.pathname);
+
+                // Slide the toast back up and hide it after 4 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 4000);
+            }
+        });
     </script>
 </body>
 </html>

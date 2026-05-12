@@ -2,10 +2,11 @@
   {
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
-      "namespace": "eaZSt",
+      "namespace": "android_app",
       "package_name": "com.francis.eazst",
       "sha256_cert_fingerprints":
-      ["05:FA:36:59:7C:8E:F5:A0:E5:4A:F7:3D:EE:C0:65:83:9D:EF:F2:62:58:73:98:88:C9:96:D5:D7:FE:CB:D7:65"]
+        ["05:FA:36:59:7C:8E:F5:A0:E5:4A:F7:3D:EE:C0:65:83:9D:EF:F2:62:58:73:98:88:C9:96:D5:D7:FE:CB:D7:65"],
+        ["37:E0:A2:3A:DC:30:E5:A2:E9:C2:C5:50:FB:C0:C5:88:2F:BF:24:E4:35:FA:43:87:BE:61:98:30:5D:40:91:30"]
     }
   }
 ]

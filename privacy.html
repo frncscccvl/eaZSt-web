@@ -93,10 +93,10 @@
     <p>This policy describes the types of information we collect when you use the eaZSt mobile application and our practices for maintaining, protecting, and disclosing that information.</p>
 
     <h2>1. Data Architecture (Cloud-Assisted Hybrid Model)</h2>
-    <p>eaZSt utilizes a secure hybrid architecture to balance on-device privacy with real-time financial tracking [1].</p>
+    <p>eaZSt utilizes a secure hybrid architecture to balance on-device privacy with real-time financial tracking.</p>
     <ul>
-        <li><strong>Local Device Storage (The Vault):</strong> We prioritize storing authentication tokens and chat history locally on your device's physical hardware using encrypted environments whenever possible [1]. If enabled, our optional Local API server runs as a secure, sandboxed loopback instance entirely on your device's local hardware [1].</li>
-        <li><strong>Secure Backend Processing:</strong> To provide 30-day income momentum tracking and real-time push notifications, our secure backend servers act as a processing bridge [1]. Our servers securely handle initial OAuth connections, listen for third-party income events (webhooks), and process strict banking integrations [1].</li>
+        <li><strong>Local Device Storage (The Vault):</strong> We prioritize storing authentication tokens and chat history locally on your device's physical hardware using encrypted environments whenever possible. If enabled, our optional Local API server runs as a secure, sandboxed loopback instance entirely on your device's local hardware.</li>
+        <li><strong>Secure Backend Processing:</strong> To provide 30-day income momentum tracking and real-time push notifications, our secure backend servers act as a processing bridge. Our servers securely handle initial OAuth connections, listen for third-party income events (webhooks), and process strict banking integrations.</li>
     </ul>
 
     <h2>2. Information We Collect and How We Use It</h2>
@@ -105,77 +105,77 @@
     <p>eaZSt allows you to connect your YouTube and AdSense accounts to track video metrics and ad revenue. <strong>eaZSt's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</strong></p>
         
     <ul>
-        <li><strong>Data Accessed:</strong> We request read-only access to your YouTube channel metadata, video statistics, estimated revenue, channel memberships, comment threads, and AdSense performance metrics (e.g., page views, clicks, RPM) [1].</li>
-        <li><strong>Data Usage:</strong> This data is used exclusively to populate your personal financial dashboard, calculate your 30-day income momentum, trigger real-time push notifications for overnight earnings, and provide localized context for the on-device Gemma AI widget [1]. We do not use this data for any other purpose [1].</li>
-        <li><strong>Data Sharing:</strong> <strong>We do not share, sell, or broker Google user data to any third parties, advertising networks, or data brokers.</strong> The data is retrieved solely for your personal visualization within the App [1].</li>
-        <li><strong>Data Storage & Protection:</strong> Authentication tokens (OAuth) are stored in a secure, encrypted PostgreSQL database on our backend [1]. Financial and metrics data is fetched dynamically over encrypted connections (HTTPS/TLS) and is processed locally on your device [1].</li>
-        <li><strong>Data Retention & Deletion:</strong> Google data and authentication tokens are retained only as long as your eaZSt account remains active [1]. You can revoke access at any time via your Google Account security settings, or by using the "Delete All Data" feature inside the App, which permanently deletes your OAuth tokens and database rows [1].</li>
+        <li><strong>Data Accessed:</strong> We request read-only access to your YouTube channel metadata, video statistics, estimated revenue, channel memberships, comment threads, and AdSense performance metrics (e.g., page views, clicks, RPM).</li>
+        <li><strong>Data Usage:</strong> This data is used exclusively to populate your personal financial dashboard, calculate your 30-day income momentum, trigger real-time push notifications for overnight earnings, and provide localized context for the on-device Gemma AI widget. We do not use this data for any other purpose.</li>
+        <li><strong>Data Sharing:</strong> <strong>We do not share, sell, or broker Google user data to any third parties, advertising networks, or data brokers.</strong> The data is retrieved solely for your personal visualization within the App.</li>
+        <li><strong>Data Storage & Protection:</strong> Authentication tokens (OAuth) are stored in a secure, encrypted PostgreSQL database on our backend. Financial and metrics data is fetched dynamically over encrypted connections (HTTPS/TLS) and is processed locally on your device.</li>
+        <li><strong>Data Retention & Deletion:</strong> Google data and authentication tokens are retained only as long as your eaZSt account remains active. You can revoke access at any time via your Google Account security settings, or by using the "Delete All Data" feature inside the App, which permanently deletes your OAuth tokens and database rows.</li>
     </ul>
 
     <h3>B. Third-Party Connections (Stripe, Telegram, Kick, Patreon, Twitch, Discord, Kraken, Streamlabs)</h3>
-    <p>We request <strong>Read-Only</strong> permissions to your third-party platforms to aggregate passive income metrics [1].</p>
+    <p>We request <strong>Read-Only</strong> permissions to your third-party platforms to aggregate passive income metrics.</p>
     <ul>
-        <li><strong>No PII Scraping:</strong> We do not fetch, store, or process the Personal Identifiable Information (PII) of your customers (e.g., credit card numbers, buyer addresses) [1]. We solely track aggregate revenue numbers and transaction IDs for deduplication [1].</li>
-        <li><strong>Live Event Processing:</strong> Our backend listens for live income events solely to trigger real-time push notifications to your device [1].</li>
+        <li><strong>No PII Scraping:</strong> We do not fetch, store, or process the Personal Identifiable Information (PII) of your customers (e.g., credit card numbers, buyer addresses). We solely track aggregate revenue numbers and transaction IDs for deduplication.</li>
+        <li><strong>Live Event Processing:</strong> Our backend listens for live income events solely to trigger real-time push notifications to your device.</li>
     </ul>
 
     <h3>C. Discord Community Integration</h3>
     <p>To personalize your experience and connect you with our community, eaZSt offers an optional Discord integration.</p>
     <ul>
-        <li><strong>Profile Data:</strong> When you authorize Discord, we request access to your basic profile information (username and avatar) [1]. This data is used strictly to display your personalized profile header within the App's settings menu [1].</li>
-        <li><strong>Community Access:</strong> We request the permission to add your account to the official eaZSt Discord server automatically [1]. We do not use this permission to join any other servers, send messages on your behalf, or modify your Discord account [1].</li>
-        <li><strong>Data Deletion:</strong> Your Discord profile data is removed instantly from your device and our servers when you long-press your Discord avatar in the app, or when you trigger a full account deletion [1].</li>
+        <li><strong>Profile Data:</strong> When you authorize Discord, we request access to your basic profile information (username and avatar). This data is used strictly to display your personalized profile header within the App's settings menu.</li>
+        <li><strong>Community Access:</strong> We request the permission to add your account to the official eaZSt Discord server automatically. We do not use this permission to join any other servers, send messages on your behalf, or modify your Discord account.</li>
+        <li><strong>Data Deletion:</strong> Your Discord profile data is removed instantly from your device and our servers when you long-press your Discord avatar in the app, or when you trigger a full account deletion.</li>
     </ul>
 
     <h3>D. Banking Services (Plaid)</h3>
     <p>We use Plaid Inc. ("Plaid") to securely connect your bank accounts.</p>
     <ul>
-        <li>Plaid collects your login credentials directly (we never see your bank username or password) [1].</li>
-        <li>We use Plaid's secure token system to fetch read-only transaction data (specifically deposits) to calculate your income flow [1]. Information collected by Plaid is subject to the <a href="https://plaid.com/legal/#end-user-privacy-policy" target="_blank">Plaid Privacy Policy</a>.</li>
+        <li>Plaid collects your login credentials directly (we never see your bank username or password).</li>
+        <li>We use Plaid's secure token system to fetch read-only transaction data (specifically deposits) to calculate your income flow. Information collected by Plaid is subject to the <a href="https://plaid.com/legal/#end-user-privacy-policy" target="_blank">Plaid Privacy Policy</a>.</li>
     </ul>
 
     <h3>E. On-Device AI Processing (Gemma Integration)</h3>
     <p>To provide advanced financial insights, eaZSt utilizes a localized version of the <strong>Gemma</strong> AI model, developed by Google.</p>
     <ul>
-        <li><strong>100% Local Inference:</strong> The AI engine runs locally on your device's edge hardware (CPU/GPU) [1]. When you query your financial data or chat with the AI widget, your sensitive financial metrics <strong>never leave your phone</strong> [1]. No cloud LLM APIs are used to process your chat prompts [1].</li>
-        <li><strong>No Model Training:</strong> Your private financial data, chat history, and third-party analytics are never used to train, fine-tune, or improve global AI models [1].</li>
+        <li><strong>100% Local Inference:</strong> The AI engine runs locally on your device's edge hardware (CPU/GPU). When you query your financial data or chat with the AI widget, your sensitive financial metrics <strong>never leave your phone</strong> [1]. No cloud LLM APIs are used to process your chat prompts.</li>
+        <li><strong>No Model Training:</strong> Your private financial data, chat history, and third-party analytics are never used to train, fine-tune, or improve global AI models.</li>
     </ul>
 
     <h3>F. Subscriptions & Billing</h3>
-    <p>Premium features are handled securely through Google Play Billing [1]. We do not collect or store your credit card information [1]. We only store anonymous receipt validation tokens to verify your active subscription tier [1].</p>
+    <p>Premium features are handled securely through Google Play Billing. We do not collect or store your credit card information. We only store anonymous receipt validation tokens to verify your active subscription tier.</p>
 
     <h3>G. Biometrics & Device Identifiers</h3>
-    <p>The App uses your device's biometric capabilities (FaceID/Fingerprint) to secure your dashboard [1]. Biometric authentication is handled entirely by your device's OS; we only receive a secure "Unlock" signal [1]. To route push notifications, we store an anonymous FCM (Firebase Cloud Messaging) device token [1].</p>
+    <p>The App uses your device's biometric capabilities (FaceID/Fingerprint) to secure your dashboard. Biometric authentication is handled entirely by your device's OS; we only receive a secure "Unlock" signal [1]. To route push notifications, we store an anonymous FCM (Firebase Cloud Messaging) device token.</p>
 
     <h3>H. Local API & Automation Port</h3>
-    <p>If you choose to enable the Local API feature inside your Settings, eaZSt initializes a lightweight, secure HTTP loopback server directly on your device's local Wi-Fi interface [1].</p>
+    <p>If you choose to enable the Local API feature inside your Settings, eaZSt initializes a lightweight, secure HTTP loopback server directly on your device's local Wi-Fi interface.</p>
     <ul>
-        <li><strong>100% Local P2P Processing:</strong> The local API operates strictly on your physical device [1]. When an authorized external client (such as an automation script running on your personal computer) queries your local <code>/eazy_bot</code> endpoint over your home Wi-Fi [1], the JSON payload is compiled and returned entirely by your phone [1]. No data is ever transmitted to or processed by our backend servers during these requests [1].</li>
-        <li><strong>No Cloud Logs:</strong> We do not log, track, or collect any local API traffic, IP addresses, ports, or payload contents on our servers [1]. Your local server's communications are entirely private and peer-to-peer [1].</li>
-        <li><strong>Cryptographic Security:</strong> To prevent unauthorized devices on your local network from reading your metrics, the local API strictly requires a custom, on-device generated security token (UUID) in the request headers [1].</li>
-        <li><strong>Instant Deactivation:</strong> Your local security token and active server configuration states are permanently erased from your device's memory upon unsubscription, manual toggle deactivation, or full account deletion [1].</li>
+        <li><strong>100% Local P2P Processing:</strong> The local API operates strictly on your physical device. When an authorized external client (such as an automation script running on your personal computer) queries your local <code>/eazy_bot</code> endpoint over your home Wi-Fi, the JSON payload is compiled and returned entirely by your phone. No data is ever transmitted to or processed by our backend servers during these requests.</li>
+        <li><strong>No Cloud Logs:</strong> We do not log, track, or collect any local API traffic, IP addresses, ports, or payload contents on our servers. Your local server's communications are entirely private and peer-to-peer.</li>
+        <li><strong>Cryptographic Security:</strong> To prevent unauthorized devices on your local network from reading your metrics, the local API strictly requires a custom, on-device generated security token (UUID) in the request headers.</li>
+        <li><strong>Instant Deactivation:</strong> Your local security token and active server configuration states are permanently erased from your device's memory upon unsubscription, manual toggle deactivation, or full account deletion.</li>
     </ul>
 
     <h2>3. Data Retention & Instant Account Deletion</h2>
     <p>We believe your data belongs to you. You have the right to revoke our access and permanently delete your account data at any time.</p>
     <ul>
-        <li><strong>Individual Disconnects:</strong> You can disconnect any service within the App's Connections hub [1]. Doing so immediately deletes local tokens and instructs our backend to sever the connection with that third party [1].</li>
-        <li><strong>Full Account Deletion:</strong> The App contains a hidden "Nuclear Wipe" feature to prevent accidental deletion [1]. Triggering this instantly severs all active banking connections (Plaid), deletes your anonymous user data and device identifiers, clears your local API security tokens [1], and wipes all webhook routing maps from our servers [1]. Any subsequent data sent by third parties to our servers will be permanently rejected [1].</li>
+        <li><strong>Individual Disconnects:</strong> You can disconnect any service within the App's Connections hub. Doing so immediately deletes local tokens and instructs our backend to sever the connection with that third party.</li>
+        <li><strong>Full Account Deletion:</strong> The App contains a hidden "Nuclear Wipe" feature to prevent accidental deletion. Triggering this instantly severs all active banking connections (Plaid), deletes your anonymous user data and device identifiers, clears your local API security tokens, and wipes all webhook routing maps from our servers. Any subsequent data sent by third parties to our servers will be permanently rejected.</li>
     </ul>
     
     <p><strong>How to permanently delete your data:</strong></p>
     <ol>
-        <li>Open the eaZSt app and navigate to the <strong>Settings</strong> screen (the gear icon) [1].</li>
-        <li>Scroll to bottom of <strong>Settings</strong> page [1].</li>
-        <li>Locate the <strong>App Version</strong> floating text [1].</li>
-        <li><strong>Tap the App Version floating text exactly four (4) times.</strong> A countdown toast will appear [1]. On the fourth tap, the permanent data wipe will initiate, and you will be automatically signed out [1].</li>
+        <li>Open the eaZSt app and navigate to the <strong>Settings</strong> screen (the gear icon).</li>
+        <li>Scroll to bottom of <strong>Settings</strong> page.</li>
+        <li>Locate the <strong>App Version</strong> floating text.</li>
+        <li><strong>Tap the App Version floating text exactly four (4) times.</strong> A countdown toast will appear. On the fourth tap, the permanent data wipe will initiate, and you will be automatically signed out.</li>
     </ol>
 
     <h2>4. Crash Logs and Stability</h2>
-    <p>We use crash reporting tools (e.g., Firebase Crashlytics) to identify bugs [1]. If the App crashes, it sends an anonymous technical report [1]. This data contains no financial tokens [1]. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
+    <p>We use crash reporting tools (e.g., Firebase Crashlytics) to identify bugs. If the App crashes, it sends an anonymous technical report. This data contains no financial tokens. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
 
     <h2>5. Children’s Privacy</h2>
-    <p>The App is not intended for children under the age of 13 [1]. We do not knowingly collect personal information from children under 13 [1].</p>
+    <p>The App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
 
     <h2>6. Your Consent</h2>
     <p>By using the App, you consent to our Privacy Policy.</p>

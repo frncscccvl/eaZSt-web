@@ -79,7 +79,7 @@
     <div class="header-container">
         <img src="icon_.png" alt="eaZSt Logo" class="app-logo">
         <h1>Terms of Service for eaZSt</h1>
-        <p><strong>Last Updated:</strong> April 20, 2026</p>
+        <p><strong>Last Updated:</strong> July 31, 2026</p>
     </div>
 
     <p>Please read these Terms of Service ("Terms") carefully before using the <strong>eaZSt</strong> mobile application (the "App") operated by <strong>FRANCIS CACCAVALE</strong> ("us," "we," or "our").</p>
@@ -89,11 +89,11 @@
     <h2>1. Nature of the App</h2>
     <p><strong>eaZSt</strong> is a visualization tool designed to help you track and view your income sources.</p>
     <ul>
-        <li><strong>Informational Use Only:</strong> The financial data presented in the App is for informational and entertainment purposes only. While we strive for accuracy, we cannot guarantee that the data retrieved from third-party APIs (YouTube, Twitch, Shopify, etc.) is 100% accurate or up-to-date.</li>
+        <li><strong>Informational Use Only:</strong> The financial data presented in the App is for informational and entertainment purposes only. While we strive for accuracy, we cannot guarantee that the data retrieved from third-party APIs (YouTube, Twitch, Stripe, Streamlabs, etc.) is 100% accurate or up-to-date.</li>
         <li><strong>Not Financial Advice:</strong> The App does not provide financial, tax, or legal advice. You should verify all financial data with your actual bank or platform records before making financial decisions.</li>
     </ul>
 
-    <h3>2. AI-Generated Insights (Gemma 4)</h3>
+    <h2>2. AI-Generated Insights (Gemma 4)</h2>
     <p>The App utilizes <strong>Gemma 4</strong>, an open model developed by Google, to provide automated financial insights and momentum forecasting. By using these features, you acknowledge and agree that:</p>
     <ul>
         <li><strong>No Guarantee of Accuracy:</strong> AI-generated insights are experimental and provided "as-is". Artificial intelligence models can hallucinate or produce inaccurate forecasts. We do not guarantee their accuracy, reliability, or completeness.</li>
@@ -101,7 +101,15 @@
         <li><strong>Acceptable Use:</strong> You agree not to attempt to reverse engineer, manipulate, or extract the underlying model parameters of the Gemma 4 architecture through your use of the App.</li>
     </ul>
 
-    <h2>3. Subscriptions & Payments</h2>
+    <h2>3. Local API & Automation Port (Optional Feature)</h2>
+    <p>If you choose to enable the optional Local API feature within the App's settings, eaZSt initializes a local, lightweight HTTP loopback server directly on your physical device's private Wi-Fi network. By enabling or using this feature, you acknowledge and agree that:</p>
+    <ul>
+        <li><strong>User's Security Responsibility:</strong> To secure this local interface, the App generates a unique, cryptographically random security token (UUID). You are solely and fully responsible for securing your private Wi-Fi network, protecting your generated security token, and ensuring that no unauthorized parties gain access to your local API port. We assume no liability for unauthorized local network access, token leaks, or security breaches on your device.</li>
+        <li><strong>No Automation/Execution Liability:</strong> The Local API is provided strictly as a read-only, informational data-transfer utility. eaZSt is not an active financial coordinator, money transmitter, or execution broker. We are not liable for any financial losses, trading bugs, transactional execution failures, network latencies, API rate-limiting blocks, or scripting errors on third-party services (such as Kraken, Stripe, or Streamlabs) resulting from your own custom, user-written scripts interacting with the Local API.</li>
+        <li><strong>Rate Limits & Device Wear:</strong> Running a local server on your device consumes system memory and battery. You agree not to spam or flood the local API with excessive queries that could cause device overheating, battery exhaustion, or local socket exceptions.</li>
+    </ul>
+
+    <h2>4. Subscriptions & Payments</h2>
     <p>The App offers a "Pro Mode" subscription that unlocks additional features.</p>
     <ul>
         <li><strong>Billing:</strong> Payments are processed securely via the Google Play Store. We do not store your credit card information.</li>
@@ -109,29 +117,29 @@
         <li><strong>Refunds:</strong> All refund requests must be handled directly through Google Play’s refund policy. We do not have the ability to issue direct refunds.</li>
     </ul>
 
-    <h2>4. Intellectual Property</h2>
+    <h2>5. Intellectual Property</h2>
     <p>The App and its original content (including the particle physics engine, visual design, AI prompt architecture, and logo) are and will remain the exclusive property of <strong>FRANCIS CACCAVALE</strong>. You may not reverse engineer, decompile, or attempt to extract the source code of the App.</p>
 
-    <h2>5. User Data & Privacy</h2>
+    <h2>6. User Data & Privacy</h2>
     <p>Our collection and use of personal information in connection with your access to and use of the App is described in our <a href="https://eaz.st/privacy.html">Privacy Policy</a>.</p>
     <ul>
         <li><strong>Local Data:</strong> You understand that your financial data is heavily reliant on local storage on your device. You are responsible for keeping your device secure to prevent unauthorized access to your data.</li>
     </ul>
 
-    <h2>6. Third-Party Services</h2>
-    <p>The App may contain links to third-party web sites or services that are not owned or controlled by us (e.g., YouTube, Twitch, Patreon, Plaid, Stripe, Streamlabs). We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
+    <h2>7. Third-Party Services</h2>
+    <p>The App may contain links to third-party web sites or services that are not owned or controlled by us (e.g., YouTube, Twitch, Patreon, Plaid, Stripe, Streamlabs) [1]. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
 
     <ul>
-        <li><strong>Supported Institutions:</strong> Bank connection services are provided by third-party aggregators (such as Plaid). We do not guarantee that your specific financial institution will be available or supported. Access to certain banks may be restricted, delayed, or unavailable due to third-party API limitations or institutional security policies.</li>
+        <li><strong>Supported Institutions:</strong> Bank connection services are provided by third-party aggregators (such as Plaid) [1]. We do not guarantee that your specific financial institution will be available or supported [1]. Access to certain banks may be restricted, delayed, or unavailable due to third-party API limitations or institutional security policies.</li>
     </ul>
     
-    <h2>7. Limitation of Liability</h2>
+    <h2>8. Limitation of Liability</h2>
     <p>In no event shall <strong>FRANCIS CACCAVALE</strong>, nor his partners or suppliers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the App; (ii) any errors, inaccuracies, or AI hallucinations within the content.</p>
 
-    <h2>8. Changes</h2>
+    <h2>9. Changes</h2>
     <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.</p>
 
-    <h2>9. Contact Us</h2>
+    <h2>10. Contact Us</h2>
     <p>If you have any questions about these Terms, please contact us at: <a href="mailto:hello@frncscccvl.com">hello@frncscccvl.com</a></p>
 
 </body>

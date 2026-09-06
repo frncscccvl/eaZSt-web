@@ -183,9 +183,8 @@
       // Directly tells Android OS to launch package com.francis.eazst's MainActivity
       //const androidIntentUri = "intent://callback" + payload + "#Intent;component=com.francis.eazst/.MainActivity;scheme=com.francis.eazst;package=com.francis.eazst;end";
 
-      const targetSchemeUrl = isOAuth 
-          ? "com.francis.eazst://callback" + payload
-          : "com.francis.eazst://return" + payload;
+      const targetHost = isOAuth ? "callback" : "return";
+      const androidIntentUri = "intent://" + targetHost + payload + "#Intent;scheme=com.francis.eazst;package=com.francis.eazst;end";
       
       // 3. Set manual button target
       /*const linkBtn = document.getElementById("appLink");
@@ -195,13 +194,11 @@
 
       const linkBtn = document.getElementById("appLink");
       if (linkBtn) {
-        linkBtn.href = targetSchemeUrl;
+        linkBtn.href = androidIntentUri;
       }
 
       // ◄ 4. Trigger immediate Android Intent launch
-      //window.location.href = androidIntentUri;
-
-      window.location.replace(targetSchemeUrl);
+      window.location.href = androidIntentUri;
       
       // 5. Update subtitle if auto-bounce takes more than 1.8s
       setTimeout(function() {

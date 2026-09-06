@@ -180,7 +180,7 @@
 
       // ◄ 2. PURE ANDROID INTENT URI (Explicit Package Targeted)
       // Directly tells Android OS to launch package com.francis.eazst's MainActivity
-      const androidIntentUri = "intent://callback" + payload + "#Intent;scheme=com.francis.eazst;package=com.francis.eazst;end";
+      const androidIntentUri = "intent://callback" + payload + "#Intent;component=com.francis.eazst/.MainActivity;scheme=com.francis.eazst;package=com.francis.eazst;end";
 
       // 3. Set manual button target
       const linkBtn = document.getElementById("appLink");

@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "67TM2W5H8X.com.francis.eazst",
+        "paths": ["/plaid", "/plaid/*"]
+      }
+    ]
+  }
+}
